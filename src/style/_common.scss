@@ -1,0 +1,126 @@
+body {
+  font-family: $lato;
+  color: $white;
+  background-color: $dark-blue;
+  font-size: 18px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.primary-theme-btn {
+  width: 180px;
+  height: 45px;
+  padding: 10px;
+  color: #000;
+  background-color: #42faff;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+.main-title {
+  font-family: $montserrat;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 1.2px;
+}
+
+.main-sub-title {
+  font-family: $lora;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 1.6px;
+}
+
+.sub-section-title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: 2.6px;
+  color: $white;
+  padding-left: 80px;
+  margin-bottom: 40px;
+}
+
+.learn-more-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.43;
+  letter-spacing: 1.2px;
+  color: $aqua;
+}
+
+.arr-link {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  color: $light-blue;
+  text-transform: uppercase;
+}
+
+.section-title {
+  position: relative;
+  font-family: $montserrat;
+  margin-bottom: 100px;
+
+  .top-text {
+    opacity: .2;
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -2.9px;
+    color: #a194f7;
+    margin-bottom: 38px;
+    display: inline-block;
+  }
+
+  .bottom-text {
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: .3px;
+    color: #fff;
+    position: absolute;
+    left: 95px;
+    bottom: 0;
+  }
+}
+
+.quotation {
+  max-width: 50%;
+  padding-left: 100px;
+  color: $white;
+  .text {
+    font-family: $lora;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.42;
+    letter-spacing: 1.2px;
+    margin-bottom: 15px;
+  }
+  .sign {
+    font-family: $montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+}

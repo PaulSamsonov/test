@@ -1,0 +1,36 @@
+//colors
+
+$black: #000;
+$white: rgb(255, 255, 255);
+$aqua: #42faff;
+$light-purple: #a194f7;
+$purple: #272d5b;
+$dark-purple: #212442;
+$light-blue: #1fb6ff;
+$blue: #5140ff;
+$secondary-blue: #21254d;
+$dark-blue: #07162f;
+
+//spaces
+
+$section-bottom: 350px;
+$sub-section-bottom: 230px;
+
+//fonts
+
+$montserrat: Montserrat, sans-serif;
+$lato: Lato, sans-serif;
+$lora: Lora, sans-serif;
+
+//mixins
+
+@mixin after-elem {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+  }
+}
+
+
