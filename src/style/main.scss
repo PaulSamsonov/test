@@ -39,13 +39,20 @@
     font-weight: 900;
     letter-spacing: 0.9px;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    .text {
+      margin-right: 8px;
+    }
   }
 }
 
 //home
 
 .section-home {
-  padding-bottom: 200px;
+  margin-bottom: $section-mid-bottom;
+  padding-bottom: 335px;
+  background: url("../images/home-bg.png") no-repeat bottom right;
   .main-sub-title {
     margin-bottom: 50px;
   }
@@ -368,9 +375,10 @@
 //faq section
 
 .faq-section {
-  max-width: 730px;
-  margin: 0 auto;
+ margin-bottom: 180px;
   .faq-accordion {
+    max-width: 730px;
+    margin: 0 auto;
     .card {
       background-color: transparent;
       border: none;
@@ -382,7 +390,7 @@
       border: none;
     }
     .btn-link {
-      @include after-elem;
+      @include abs-icon;
       letter-spacing: 0.3px;
       color: $white;
       text-decoration: none;
@@ -395,12 +403,16 @@
       padding: 21px;
       &:after {
         @include abs-align-y;
-        content: '\f107';
-        font-family: FontAwesome;
         right: 30px;
-        position: absolute;
         font-size: 36px;
+        content: '\f107';
       }
     }
   }
+}
+
+//subscribe section
+
+.subscribe-section {
+  padding: 100px 0;
 }
