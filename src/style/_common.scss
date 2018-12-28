@@ -58,6 +58,11 @@ ul {
   color: $white;
   padding-left: 80px;
   margin-bottom: 40px;
+
+  &.text-center {
+    font-weight: 900;
+    padding: 0;
+  }
 }
 
 .learn-more-link {
