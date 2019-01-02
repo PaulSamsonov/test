@@ -24,7 +24,7 @@ $lato: Lato, sans-serif;
 $lora: Lora, sans-serif;
 
 //mixins
-@mixin after-elems {
+@mixin abs-elems {
   position: relative;
   &:after, &:before {
     content: '';

@@ -577,6 +577,45 @@
   }
 }
 
+//partners section
+
+.partners-section {
+  margin-bottom: $sub-section-bottom;
+  .partner-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-height: 150px;
+      max-width: 70%;
+    }
+    &.b-bottom {
+      border-bottom: 1px solid $white;
+    }
+    &.b-right {
+      border-right: 1px solid $white;
+    }
+    &.crop-corners {
+      @include abs-elems;
+
+      &:after, &:before {
+        width: 50px;
+        height: 50px;
+        background-color: $dark-blue;
+        bottom: -25px;
+        z-index: 2;
+      }
+      &:before {
+        left: -25px;
+      }
+      &:after {
+        right: -25px;
+      }
+    }
+  }
+}
+
 //events section
 
 .events-section {

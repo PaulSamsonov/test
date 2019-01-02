@@ -128,7 +128,7 @@ ul {
 }
 
 .quotation {
-  @include after-elems;
+  @include abs-elems;
   max-width: 50%;
   color: $white;
   padding: 66px 0 0 95px;
