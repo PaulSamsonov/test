@@ -39,6 +39,11 @@ $lora: Lora, sans-serif;
   transform: translateY(-50%);
 }
 
+@mixin abs-align-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @mixin abs-icon{
   position: relative;
 

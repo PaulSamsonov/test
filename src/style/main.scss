@@ -70,6 +70,60 @@
   }
 }
 
+//discover section
+
+.discover-section {
+  margin-bottom: $sub-section-bottom;
+  .section-title {
+    margin-bottom: 50px;
+  }
+  .section-img {
+    display: block;
+    width: 46%;
+    margin: 0 0 0 auto;
+  }
+  .section-descr {
+    position: relative;
+    .abs-container {
+      @include abs-align-x;
+      top: 70px;
+      position: absolute;
+      padding-left: 95px;
+    }
+  }
+  .descr-title {
+    font-family: $montserrat;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.8px;
+    margin-bottom: 50px;
+  }
+  .counter {
+    margin-bottom: 70px;
+    .count {
+      font-size: 72px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      color: $aqua;
+    }
+    .descr {
+      font-size: 16px;
+      font-style: italic;
+      line-height: 1.88;
+      letter-spacing: 0.8px;
+    }
+  }
+  .registration {
+    .registration-title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: 0.6px;
+    }
+  }
+}
+
 //token sale section
 
 .token-sale-section {
@@ -375,7 +429,7 @@
 //faq section
 
 .faq-section {
- margin-bottom: 180px;
+  margin-bottom: 180px;
   .faq-accordion {
     max-width: 730px;
     margin: 0 auto;
