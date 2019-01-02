@@ -176,3 +176,14 @@ ul {
   text-transform: uppercase;
   margin: 0 10px;
 }
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  background-color: $white;
+  border-radius: 50%;
+  color: $blue;
+  text-align: center;
+  padding: 3px;
+  font-size: 19px;
+}
