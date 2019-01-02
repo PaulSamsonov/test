@@ -124,10 +124,32 @@
   }
 }
 
+//introducing section
+
+.introducing-section {
+  margin-bottom: $sub-section-bottom;
+  .section-title {
+    margin-bottom: 77px;
+  }
+  .section-img {
+    display: block;
+    width: 56%;
+    margin: 0 20px 0 auto;
+  }
+  .section-descr {
+    position: relative;
+    .abs-container {
+      @include abs-align-x;
+      top: 0;
+      position: absolute;
+    }
+  }
+}
+
 //token sale section
 
 .token-sale-section {
-  margin-bottom: $section-bottom;
+  margin-bottom: $section-mid-bottom;
   .main-block {
     @include after-elem;
     background-color: $blue;
@@ -165,7 +187,6 @@
     position: relative;
     bottom: 60px;
     box-shadow: -9px -9px 35px 4px rgba(33, 37, 77, 0.4);
-
     .arr-link {
       color: $aqua;
     }
@@ -175,7 +196,6 @@
     letter-spacing: 2px;
     color: $white;
     margin-bottom: 22px;
-
     &.text-right {
       margin-bottom: 45px;
     }
@@ -195,7 +215,6 @@
     display: inline-block;
     width: 50%;
     text-align: center;
-
     &.active {
       color: $dark-blue;
       background-color: $aqua;

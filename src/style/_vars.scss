@@ -24,10 +24,16 @@ $lato: Lato, sans-serif;
 $lora: Lora, sans-serif;
 
 //mixins
+@mixin after-elems {
+  position: relative;
+  &:after, &:before {
+    content: '';
+    position: absolute;
+  }
+}
 
 @mixin after-elem {
   position: relative;
-
   &:after {
     content: '';
     position: absolute;

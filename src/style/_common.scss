@@ -99,7 +99,6 @@ ul {
   position: relative;
   font-family: $montserrat;
   margin-bottom: 100px;
-
   .top-text {
     opacity: .2;
     font-size: 100px;
@@ -110,7 +109,6 @@ ul {
     margin-bottom: 38px;
     display: inline-block;
   }
-
   .bottom-text {
     font-size: 68px;
     font-weight: 700;
@@ -124,9 +122,10 @@ ul {
 }
 
 .quotation {
+  @include after-elems;
   max-width: 50%;
-  padding-left: 100px;
   color: $white;
+  padding: 66px 0 0 95px;
   .text {
     font-family: $lora;
     font-size: 24px;
@@ -141,5 +140,19 @@ ul {
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: 1px;
+  }
+  &:before, &:after {
+    background: url("../images/icon-quotations.png") no-repeat center/contain;
+    width: 171px;
+    height: 120px;
+  }
+  &:before {
+    left: 0;
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
   }
 }
