@@ -232,6 +232,10 @@
     padding: 79px;
     color: $white;
     text-align: center;
+
+    img {
+      max-height: 225px;
+    }
   }
   .col {
     padding: 15px;
