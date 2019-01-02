@@ -1,3 +1,5 @@
+@import "vars";
+
 body {
   font-family: $lato;
   color: $white;
@@ -159,4 +161,18 @@ ul {
     right: 0;
     transform: rotate(180deg);
   }
+}
+
+.marker {
+  padding: 4px 14px;
+  height: 25px;
+  font-family: $montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: $white;
+  border-radius: 20px;
+  background-color: $blue;
+  text-transform: uppercase;
+  margin: 0 10px;
 }
