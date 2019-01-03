@@ -616,6 +616,19 @@
   }
 }
 
+//media section
+
+.media-section {
+  margin-bottom: $sub-section-bottom;
+  .media-texts {
+    margin-bottom: 60px;
+    .col {
+      line-height: 1.56;
+      letter-spacing: 0.9px;
+    }
+  }
+}
+
 //events section
 
 .events-section {
