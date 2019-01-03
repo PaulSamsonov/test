@@ -673,12 +673,30 @@
     .card {
       background-color: transparent;
       border: none;
+      margin-bottom: 20px;
+
+      .faq-content {
+        text-align: center;
+        border: 2px solid $aqua;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.25;
+        position: relative;
+        top: -3px;
+        z-index: 1;
+      }
     }
     .card-header {
-      margin-bottom: 20px;
       padding: 0;
-      background: transparent;
+      background: $dark-blue;
       border: none;
+      position: relative;
+      z-index: 10;
+    }
+    .card-body {
+      padding: 20px 100px 35px;
     }
     .btn-link {
       @include abs-icon;
