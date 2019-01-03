@@ -16,6 +16,7 @@ a {
   &:focus,
   &:active {
     text-decoration: none;
+    color: $blue;
   }
 }
 
@@ -32,12 +33,19 @@ ul {
 .primary-theme-btn {
   width: 180px;
   height: 45px;
-  padding: 10px;
+  padding: 9px;
   color: #000;
-  background-color: #42faff;
+  background-color: $aqua;
   border-radius: 50px;
   letter-spacing: 1px;
   font-weight: 900;
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $aqua;
+    color: $aqua;
+  }
 }
 
 .main-title {
@@ -90,6 +98,12 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &:hover {
+    .icon {
+      border-color: $blue;
+    }
   }
 }
 

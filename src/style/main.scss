@@ -191,6 +191,9 @@
     }
     .arr-link {
       color: $aqua;
+      @include link-effects {
+        color: $blue;
+      }
     }
     .sub-block-text {
       font-size: 36px;
@@ -556,6 +559,9 @@
     color: $white;
 
     a {
+      @include link-effects {
+        color: $blue;
+      }
       color: $aqua;
       text-decoration: underline;
     }
@@ -570,10 +576,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 175px;
 
     img {
       max-height: 150px;
       max-width: 70%;
+    }
+    .partner-link {
+      text-align: center;
     }
     &.b-bottom {
       border-bottom: 1px solid $white;
@@ -723,8 +733,8 @@
 //subscribe section
 
 .subscribe-section {
-  padding: 100px 0;
-  background: url("../images/subscribe-bg.png") right no-repeat;
+  padding: 88px 0;
+  background: url("../images/subscribe-bg.png") right/auto 100% no-repeat;
   .subscribe-title {
     margin-bottom: 30px;
   }
@@ -732,6 +742,49 @@
     padding-left: 95px;
   }
 }
+
+//footer
+.footer {
+  color: $white;
+  background-color: $dark-purple;
+  .footer-body {
+    padding: 38px 63px;
+    border-bottom: 2px solid $light-grey;
+    .foot-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .foot-links {
+      li {
+        display: block;
+      }
+    }
+    .foot-link {
+      @include link-effects {
+        color: $white;
+        opacity: 1;
+      }
+      margin-bottom: 10px;
+      opacity: 0.75;
+      font-size: 14px;
+      color: $light-grey;
+      line-height: 1;
+    }
+    .footer-logo {
+      text-align: right;
+      img {
+        max-width: 108px;
+      }
+    }
+  }
+  .copyright {
+    padding: 20px 0;
+    font-size: 11px;
+    color: $light-grey;
+  }
+}
+
 
 //modal
 

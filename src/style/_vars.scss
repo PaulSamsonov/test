@@ -1,7 +1,7 @@
 //colors
 
 $black: #000;
-$white: rgb(255, 255, 255);
+$white: #fff;
 $aqua: #42faff;
 $light-purple: #a194f7;
 $purple: #272d5b;
@@ -10,6 +10,7 @@ $light-blue: #1fb6ff;
 $blue: #5140ff;
 $secondary-blue: #21254d;
 $dark-blue: #07162f;
+$light-grey: #eff1f4;
 $transp: transparent;
 
 //spaces
@@ -80,6 +81,12 @@ $lora: Lora, sans-serif;
   }
 
   @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin link-effects {
+  &:hover, &:focus, &:active {
     @content;
   }
 }
