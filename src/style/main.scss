@@ -181,44 +181,29 @@
   }
   .sub-block {
     padding: 60px 25px 20px;
-    background-color: $secondary-blue;
     width: 66%;
     margin: 0 0 0 auto;
-    position: relative;
     bottom: 60px;
     box-shadow: -9px -9px 35px 4px rgba(33, 37, 77, 0.4);
+    background-color: $secondary-blue;
+    .token-button {
+      padding: 7px;
+    }
     .arr-link {
       color: $aqua;
     }
-  }
-  .sub-block-text {
-    font-size: 36px;
-    letter-spacing: 2px;
-    color: $white;
-    margin-bottom: 22px;
-    &.text-right {
-      margin-bottom: 45px;
+    .sub-block-text {
+      font-size: 36px;
+      letter-spacing: 2px;
+      color: $white;
+      margin-bottom: 22px;
+      &.text-right {
+        margin-bottom: 45px;
+      }
     }
-  }
-  .token-buttons {
-    display: flex;
-    border: 1px solid $aqua;
-    margin-bottom: 18px;
   }
   .token-button {
-    font-family: $montserrat;
     font-size: 64px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: $white;
-    padding: 7px;
-    display: inline-block;
-    width: 50%;
-    text-align: center;
-    &.active {
-      color: $dark-blue;
-      background-color: $aqua;
-    }
   }
 }
 
@@ -721,4 +706,92 @@
 
 .subscribe-section {
   padding: 100px 0;
+}
+
+//modal
+
+.whitelist-modal {
+  .modal-dialog {
+    max-width: 650px;
+  }
+  .modal-content {
+    background-color: $blue;
+    border-radius: 0;
+  }
+  .modal-header {
+    flex-direction: column;
+    align-items: center;
+    border: none;
+  }
+  .modal-body {
+    padding: 0 75px;
+  }
+  .modal-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.81;
+    letter-spacing: 1.4px;
+    margin-bottom: 10px;
+  }
+  .whitelist-form {
+    margin-bottom: 30px;
+  }
+  .token-block {
+    margin-bottom: 40px;
+    .sub-block-text {
+      font-size: 20px;
+      margin: 8px 0;
+    }
+    .token-buttons {
+      margin-bottom: 0;
+    }
+  }
+  .close {
+    color: $white;
+    opacity: 1;
+    font-size: 37px;
+    padding: 10px 18px;
+  }
+  .btn {
+    min-width: 220px;
+    letter-spacing: 1.5px;
+  }
+  .inp {
+    @include placeholder {
+      color: $white;
+    }
+    margin-bottom: 10px;
+    letter-spacing: 1.8px;
+    font-size: 14px;
+    padding: 15px 10px;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px;
+    color: $white;
+    border: 0;
+    border-bottom: 1px solid $white;
+    background-color: $transp;
+    text-transform: uppercase;
+  }
+  .form-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-check-label {
+    font-size: 10px;
+    font-style: italic;
+    letter-spacing: -0.2px;
+    margin: 0 7px;
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+  .logo {
+    img {
+      max-width: 140px;
+      margin-bottom: 10px;
+    }
+  }
 }

@@ -9,6 +9,50 @@
 	<link href="css/libs.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 </head>
+<body>
+<div class="modal fade whitelist-modal" id="whitelistModal" tabindex="-1" role="dialog"
+		 aria-labelledby="whitelistModal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
+				<h3 class="modal-title">Join the whitelist</h3>
+			</div>
+			<div class="modal-body">
+				<form class="whitelist-form">
+					<div class="form-group">
+						<input type="text" placeholder="Full Name" class="inp">
+						<input type="email" placeholder="Email" class="inp">
+					</div>
+					<div class="token-block">
+						<p class="sub-block-text">I want to reserve</p>
+						<div class="token-buttons">
+							<div class="token-button active">€100k&lt;</div>
+							<div class="token-button">≥€100k</div>
+						</div>
+						<div class="sub-block-text text-right">worth of tokens</div>
+					</div>
+					<p class="text-center">
+						<a href="#" class="btn primary-theme-btn">Get whitelisted</a>
+					</p>
+					<div class="form-group form-check">
+						<input type="checkbox" id="termsAndCond">
+						<label class="form-check-label" for="termsAndCond">By registering you
+							agree to our
+							<a href="#">Terms &amp; Conditions</a></label>
+						<input type="checkbox" id="addToNews">
+						<label class="form-check-label" for="addToNews">Add me to the
+							newsletter</label>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
 <header class="header">
 	<div class="container">
 		<div class="inner-wrap">
@@ -23,7 +67,8 @@
 					<li><a href="#" class="main-nav-link">FAQ</a></li>
 					<li><a href="#" class="main-nav-link">Social</a></li>
 				</ul>
-				<a href="#" class="btn primary-theme-btn">Get whitelisted</a>
+				<a href="#" class="btn primary-theme-btn" data-toggle="modal" data-target="#whitelistModal">Get
+					whitelisted</a>
 			</div>
 		</div>
 	</div>
@@ -92,7 +137,7 @@
 						unlocked!
 					</div>
 				</div>
-				<div class="sub-block">
+				<div class="sub-block token-block">
 					<p class="sub-block-text">I want to reserve</p>
 					<div class="token-buttons">
 						<div class="token-button active">€100k&lt;</div>
@@ -698,7 +743,6 @@
 	</section>
 </div>
 <footer class="footer"></footer>
-<body>
 <script type="text/javascript" src="js/libs.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
