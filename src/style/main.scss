@@ -724,6 +724,13 @@
 
 .subscribe-section {
   padding: 100px 0;
+  background: url("../images/subscribe-bg.png") right no-repeat;
+  .subscribe-title {
+    margin-bottom: 30px;
+  }
+  .subscribe-body {
+    padding-left: 95px;
+  }
 }
 
 //modal
