@@ -124,6 +124,97 @@
   }
 }
 
+//reviews section
+
+.reviews-section {
+  margin-bottom: $section-bottom;
+}
+
+.reviews-slider {
+  .inner-img {
+    position: relative;
+    .review-logo {
+      @include abs-align;
+      position: absolute;
+    }
+  }
+  .review {
+    background-color: $dark-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    height: 100%;
+  }
+  .review-text {
+    max-width: 80%;
+    line-height: 1.56;
+    letter-spacing: 0.9px;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .review-author {
+    @include after-elem;
+    font-family: $montserrat;
+    font-weight: 700;
+    line-height: 1.67;
+    letter-spacing: 0.9px;
+    padding-left: 60px;
+    &:after {
+      @include abs-align-y;
+      height: 2px;
+      width: 50px;
+      left: 0;
+      background-color: $aqua;
+    }
+  }
+  .carousel-control {
+    @include abs-align-y;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $blue;
+    opacity: 1;
+    font-size: 40px;
+
+    &-prev {
+      left: -30px;
+    }
+    &-next {
+      right: -30px;
+    }
+  }
+  .carousel-indicators {
+    position: static;
+    margin: 36px 60px;
+    align-items: center;
+    li {
+      width: calc(100% / 5);
+      text-indent: 0;
+      background: none;
+      border: none;
+      opacity: 1;
+      height: auto;
+      text-align: center;
+
+      .active-img {
+        display: none;
+      }
+
+      &.active {
+        .active-img {
+          display: inline-block;
+        }
+        .default-img {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 //introducing section
 
 .introducing-section {
