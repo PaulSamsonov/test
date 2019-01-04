@@ -946,17 +946,17 @@
 				<form class="whitelist-form">
 					<div class="token-block">
 						<p class="sub-block-text">I want to reserve</p>
-						<div class="token-buttons">
+						<div class="token-buttons" id="tokenButtons">
 							<div class="token-button active">€100k&lt;</div>
 							<div class="token-button">≥€100k</div>
 						</div>
 						<div class="sub-block-text text-right">worth of tokens</div>
 					</div>
 					<div class="form-group">
-						<input type="text" placeholder="First Name" class="inp">
-						<input type="text" placeholder="Last Name" class="inp">
-						<input type="email" placeholder="Email" class="inp">
-						<select name="nationality">
+						<input id="firstName" type="text" placeholder="First Name" class="inp">
+						<input id="lastName" type="text" placeholder="Last Name" class="inp">
+						<input id="email" type="email" placeholder="Email" class="inp">
+						<select name="nationality" id="nationality">
 							<option value="">Nationality</option>
 							<option value="afghan">Afghan</option>
 							<option value="albanian">Albanian</option>
@@ -1138,7 +1138,7 @@
 							<option value="thai">Thai</option>
 							<option value="togolese">Togolese</option>
 							<option value="tongan">Tongan</option>
-							<option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+							<option value="trinidadian_or_tobagonian">Trinidadian or Tobagonian</option>
 							<option value="tunisian">Tunisian</option>
 							<option value="turkish">Turkish</option>
 							<option value="tuvaluan">Tuvaluan</option>
@@ -1155,7 +1155,7 @@
 						</select>
 					</div>
 					<p class="text-center">
-						<a href="#" class="btn primary-theme-btn">Get whitelisted</a>
+						<a href="#" id="getWhitelisted" class="btn primary-theme-btn">Get whitelisted</a>
 					</p>
 					<div class="form-group form-check">
 						<input type="checkbox" id="termsAndCond">

@@ -198,6 +198,7 @@ ul {
     width: 50%;
     text-align: center;
     font-size: 36px;
+    cursor: pointer;
     &.active {
       color: $dark-blue;
       background-color: $aqua;
