@@ -50,7 +50,7 @@
 //home
 
 .section-home {
-  margin-bottom: $section-mid-bottom;
+  margin-bottom: $section-mid-space;
   padding-bottom: 335px;
   background: url("../images/home-bg.png") no-repeat bottom right;
   .main-sub-title {
@@ -73,7 +73,7 @@
 //discover section
 
 .discover-section {
-  margin-bottom: $sub-section-bottom;
+  margin-bottom: $section-sub-bottom;
   .section-title {
     margin-bottom: 50px;
   }
@@ -127,7 +127,7 @@
 //reviews section
 
 .reviews-section {
-  margin-bottom: $section-bottom;
+  margin-bottom: $section-space;
 }
 
 .reviews-slider {
@@ -218,7 +218,7 @@
 //introducing section
 
 .introducing-section {
-  margin-bottom: $sub-section-bottom;
+  margin-bottom: $section-sub-bottom;
   .section-title {
     margin-bottom: 77px;
   }
@@ -240,7 +240,7 @@
 //token sale section
 
 .token-sale-section {
-  margin-bottom: $section-mid-bottom;
+  margin-bottom: $section-mid-space;
   .main-block {
     @include after-elem;
     background-color: $blue;
@@ -304,7 +304,7 @@
 //roadmap section
 
 .roadmap-section {
-  margin-bottom: $section-bottom;
+  margin-bottom: $section-space;
 
   .roadmap-item {
     background-color: $purple;
@@ -334,13 +334,13 @@
 //offering section
 
 .offering-section {
-  margin-bottom: $section-bottom;
+  margin-bottom: $section-space;
 }
 
 //graphic section
 
 .graphic-section {
-  margin-bottom: $section-bottom;
+  background: url(../images/token-graph-bg.png) 0 0/100% auto no-repeat;
   .token-graphic-image {
     max-width: 650px;
     display: block;
@@ -431,8 +431,8 @@
 //documents section
 
 .documents-section {
-  background-color: $dark-blue;
-  margin-bottom: $section-mid-bottom;
+  padding-top: $section-space;
+  margin-bottom: $section-mid-space;
   .container-fluid {
     padding: 0;
   }
@@ -575,7 +575,7 @@
 //team section
 
 .team-section {
-  margin-bottom: $section-mid-bottom;
+  margin-bottom: $section-mid-space;
   .section-title {
     .top-text {
       margin-bottom: 117px;
@@ -662,7 +662,7 @@
 //partners section
 
 .partners-section {
-  margin-bottom: $sub-section-bottom;
+  margin-bottom: $section-sub-bottom;
   .partner-item {
     display: flex;
     align-items: center;
@@ -706,7 +706,7 @@
 //media section
 
 .media-section {
-  margin-bottom: $sub-section-bottom;
+  margin-bottom: $section-sub-bottom;
   .media-texts {
     margin-bottom: 60px;
     .col {
