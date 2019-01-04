@@ -51,7 +51,6 @@
 
 .section-home {
   margin-bottom: $section-mid-space;
-  padding-bottom: 335px;
   background: url("../images/home-bg.png") no-repeat bottom right;
   .main-sub-title {
     margin-bottom: 50px;
@@ -65,9 +64,9 @@
     line-height: 1.42;
     letter-spacing: 1.3px;
   }
-  .learn-more-link {
-    margin-bottom: 45px;
-  }
+ .arr-link {
+   margin-bottom: 320px;
+ }
 }
 
 //discover section
@@ -131,6 +130,11 @@
 }
 
 .reviews-slider {
+  .inner-wrap {
+    position: relative;
+    background-color: $dark-blue;
+    box-shadow: 0 0 100px 15px $secondary-blue;
+  }
   .inner-img {
     position: relative;
     .review-logo {
@@ -139,12 +143,13 @@
     }
   }
   .review {
-    background-color: $dark-blue;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px;
     height: 100%;
+    position: relative;
+    z-index: 100;
   }
   .review-text {
     max-width: 80%;
@@ -178,6 +183,7 @@
     background-color: $blue;
     opacity: 1;
     font-size: 40px;
+    cursor: pointer;
 
     &-prev {
       left: -30px;
