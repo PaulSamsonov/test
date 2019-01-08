@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
   //----- Variable
   var failList = ['algerian', 'bahamian', 'bangladeshi', 'bolivian', 'batswana', 'ethiopian', 'chinese', 'cuban', 'ecuadorean', 'ghanaian', 'iranian', 'jordanian', 'macedonian', 'moroccan', 'nepalese', 'north_korean', 'pakistani', 'serbian', 'sri_lankan', 'syrian', 'sudanese', 'trinidadian_or_tobagonian', 'tunisian', 'american', 'venezuelan', 'yemeni'
-  ], email, firstName, lastName, nationality, tokenButtons, toNewsletter, termsAndConditions;
+  ], email, firstName, lastName, nationality, tokenButtons, toNewsletter, termsAndConditions, recaptcha = false;
 
   //----- Events
 
@@ -49,7 +49,7 @@ jQuery(document).ready(function ($) {
 
     if (!nationality.val().length) {
       error = true;
-      nationality.addClass('error');
+      $('.select2').addClass('error');
     } else {
       nationality.removeClass('error');
     }
@@ -63,7 +63,7 @@ jQuery(document).ready(function ($) {
       email.removeClass('error');
     }
 
-    if (!error) {
+    if (!error && recaptcha) {
       addToAllContacts();
     }
 
@@ -81,6 +81,37 @@ jQuery(document).ready(function ($) {
     e.preventDefault();
     var landBlock = $('#tokenButtons');
     switchInvestorType(this, landBlock);
+  });
+
+  $('#nationality').select2({
+    minimumResultsForSearch: -1,
+    width: '100%'
+  });
+
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6LcO0ocUAAAAABj11_siC5P2rZSsxviho9yi0XMh', {action: 'homepage'}).then(function (token) {
+
+      var form = new FormData();
+      form.append("secret", "6LcO0ocUAAAAAIjN4_imwakEeiP1XcTARILJmMmh");
+      form.append("response", token);
+
+      var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://www.google.com/recaptcha/api/siteverify",
+        "method": "POST",
+        "processData": false,
+        "contentType": false,
+        "mimeType": "multipart/form-data",
+        "data": form
+      };
+
+      jQuery.ajax(settings).done(function (response) {
+        recaptcha = JSON.parse(response).success;
+      });
+
+    });
+
   });
 
   //----- Functions
@@ -150,7 +181,7 @@ jQuery(document).ready(function ($) {
       $(self).parent().find('.active').removeClass('active');
       $(self).addClass('active');
 
-      if($(self).hasClass('more')){
+      if ($(self).hasClass('more')) {
         landBlock.find('.more').addClass('active');
       } else {
         landBlock.find('.less').addClass('active');
