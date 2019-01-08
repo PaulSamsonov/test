@@ -50,17 +50,22 @@ jQuery(document).ready(function ($) {
     if (!nationality.val().length) {
       error = true;
       $('.select2').addClass('error');
+      $('#select2-nationality-container').css('cssText','color: darkred !important');
     } else {
       nationality.removeClass('error');
+      $('.select2-selection__rendered').removeAttr('style');
+      $('.select2').removeClass('error');
+
     }
 
     if (!termsAndConditions.prop('checked')) {
       error = true;
       termsAndConditions.addClass('error');
-      $('label[for="termsAndCond"]').addClass('error');
-      console.log('termsAndConditions');
+      $('label[for="termsAndCond"]').addClass('error-radio');
     } else {
-      email.removeClass('error');
+      termsAndConditions.removeClass('error-radio');
+      $('label[for="termsAndCond"]').removeClass('error-radio');
+
     }
 
     if (!error && recaptcha) {
