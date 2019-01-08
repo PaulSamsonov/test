@@ -152,6 +152,7 @@ jQuery(document).ready(function ($) {
           addToList(res.persisted_recipients, 6489205);
         }
 
+        alert('Request to reservation was send')
       },
       error: function (error) {
         console.log(error.responseText);
@@ -170,7 +171,6 @@ jQuery(document).ready(function ($) {
         xhr.setRequestHeader('Authorization', 'Bearer  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');
       },
       success: function () {
-        location.reload();
       },
       error: function (error) {
         console.log(error.responseText);
