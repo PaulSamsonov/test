@@ -230,3 +230,12 @@ ul {
   padding: 3px;
   font-size: 19px;
 }
+
+.error {
+  color: darkred !important;
+  border-bottom: 1px solid darkred !important;
+}
+
+.error::placeholder{
+  color: darkred !important;
+}
