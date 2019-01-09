@@ -9,6 +9,8 @@
 	<link href="css/libs.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+		  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<script src='https://www.google.com/recaptcha/api.js?render=6LcO0ocUAAAAABj11_siC5P2rZSsxviho9yi0XMh'></script>
 </head>
 <body>
@@ -966,8 +968,8 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 				<a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
-				<h3 class="modal-title">Reserve your spot for the Bitwala STO!</h3>
-				<h4 class="">The reservation is non-binding, we will contact you with further information, including the link to the identification process, as soon as available.</h4>
+				<h3 id="modal-title" class="modal-title">Reserve your spot for the Bitwala STO!</h3>
+				<h4 id="modal-sub-title" class="">The reservation is non-binding, we will contact you with further information, including the link to the identification process, as soon as available.</h4>
 			</div>
 			<div class="modal-body">
 				<form class="whitelist-form">
@@ -1195,6 +1197,35 @@
 							We will never spam you and you can unsubscribe any time.</label>
 					</div>
 				</form>
+			</div>
+
+		</div>
+	</div>
+</div><div class="modal fade whitelist-modal" id="whitelistModalSend" tabindex="-1" role="dialog"
+		 aria-labelledby="whitelistModal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
+				<h3 id="modal-title-send" class="modal-title">Please check your email, we will contact you shortly with
+					more information!</h3>
+			</div>
+			<div class="modal-body">
+
+				<div class="row">
+					<div class="col" style="margin-left: 75px;">
+						<a class="telegram-button" href="#"><i class="fab fa-telegram-plane"></i>1.254</a>
+						<p>Join our community!</p>
+					</div>
+					<div class="col">
+						<a class="bitwala-button" href="#">Bitwala</a>
+						<p>Sign up for your free Bitwala Banking account!</p>
+					</div>
+				</div>
+
 			</div>
 
 		</div>

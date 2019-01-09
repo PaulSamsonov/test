@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
 
     }
 
-    if (!error && recaptcha) {
+    if (!error) {
       addToAllContacts();
     }
 
@@ -151,8 +151,8 @@ jQuery(document).ready(function ($) {
         if (toNewsletter) {
           addToList(res.persisted_recipients, 6489205);
         }
-
-        alert('Request to reservation was send')
+        $('#whitelistModal').modal('hide');
+        $('#whitelistModalSend').modal('show');
       },
       error: function (error) {
         console.log(error.responseText);
