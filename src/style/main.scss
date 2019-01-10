@@ -137,9 +137,15 @@
   }
   .inner-img {
     position: relative;
+    height: 100%;
     .review-logo {
       @include abs-align;
       position: absolute;
+      max-width: 70%;
+    }
+    .bg-img {
+      min-width: 100%;
+      height: auto;
     }
   }
   .review {
@@ -247,11 +253,13 @@
 
 .token-sale-section {
   margin-bottom: $section-mid-space;
+  .container-fluid {
+    padding: 0 74px;
+  }
   .main-block {
     @include after-elem;
     background-color: $blue;
     color: $white;
-    margin: 0 -94px;
     padding: 40px 94px 75px;
 
     &:after {
@@ -274,7 +282,7 @@
     font-style: italic;
     line-height: 1.33;
     letter-spacing: 1.6px;
-    max-width: 70%;
+    max-width: 75%;
   }
   .sub-block {
     padding: 60px 25px 20px;
@@ -413,20 +421,20 @@
       }
     }
     &.first {
-      width: 444px;
-      top: 63px;
+      width: 40%;
+      top: 10%;
     }
     &.second {
-      width: 469px;
-      top: 280px;
+      width: 42%;
+      top: 45%;
     }
     &.third {
-      width: 449px;
-      top: 107px;
+      width: 40%;
+      top: 18%;
     }
     &.fourth {
-      width: 509px;
-      top: 337px;
+      width: 46%;
+      top: 54%;
       .descr {
         max-width: 220px;
       }
@@ -584,7 +592,7 @@
   margin-bottom: $section-mid-space;
   .section-title {
     .top-text {
-      margin-bottom: 117px;
+      margin-bottom: 10%;
     }
   }
   .team-members {
@@ -596,6 +604,7 @@
     border-radius: 3px;
     transition: all 0.3s;
     margin: 15px 0;
+    font-size: 16px;
 
     .overlay {
       opacity: 0;
@@ -612,7 +621,7 @@
     }
 
     .member-name {
-      font-size: 23px;
+      font-size: 1.4375em;
       font-weight: 900;
       line-height: 1;
       letter-spacing: 1.2px;
@@ -620,7 +629,7 @@
 
     .position {
       @include after-elem;
-      font-size: 18px;
+      font-size: 1.125em;
       font-weight: 900;
       line-height: 1.28;
       letter-spacing: 0.9px;
@@ -637,7 +646,7 @@
     }
 
     .descr {
-      font-size: 16px;
+      font-size: 1em;
       line-height: 1.44;
       letter-spacing: 0.8px;
       margin-bottom: 15px;
