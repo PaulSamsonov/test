@@ -198,6 +198,7 @@ ul {
     width: 50%;
     text-align: center;
     font-size: 36px;
+    cursor: pointer;
     &.active {
       color: $dark-blue;
       background-color: $aqua;
@@ -228,4 +229,21 @@ ul {
   text-align: center;
   padding: 3px;
   font-size: 19px;
+}
+
+.error {
+  color: darkred !important;
+  border-bottom: 1px solid darkred !important;
+}
+
+.error::placeholder{
+  color: darkred !important;
+}
+
+.error-radio {
+  color: darkred !important;
+
+  a{
+    color: darkred !important;
+  }
 }
