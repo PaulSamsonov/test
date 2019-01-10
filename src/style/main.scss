@@ -5,7 +5,16 @@
 
 .header {
   padding: 47px 0;
-
+  &.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff1a;
+    z-index: 100000;
+    background-color: rgba(33, 36, 66, 0.9);
+  }
   .inner-wrap {
     display: flex;
     justify-content: space-between;
