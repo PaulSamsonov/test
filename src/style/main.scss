@@ -314,7 +314,7 @@
 
   .roadmap-item {
     background-color: $purple;
-    padding: 79px;
+    padding: 63px 79px;
     color: $white;
     text-align: center;
 
@@ -661,6 +661,7 @@
       }
       color: $aqua;
       text-decoration: underline;
+      font-weight: 900;
     }
   }
 }
@@ -719,6 +720,9 @@
       line-height: 1.56;
       letter-spacing: 0.9px;
     }
+  }
+  .m-bottom {
+    margin-bottom: 118px;
   }
 }
 
@@ -970,3 +974,5 @@
     }
   }
 }
+
+@import "media";
