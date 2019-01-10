@@ -61,14 +61,15 @@
 .section-home {
   margin-bottom: $section-mid-space;
   background: url("../images/home-bg.png") no-repeat bottom right;
+  padding-top: 20px;
   .main-sub-title {
-    margin-bottom: 50px;
+    margin-bottom: 6%;
   }
   .home-descr {
     max-width: 50%;
   }
   .description {
-    margin-bottom: 20px;
+    margin-bottom: 7%;
     font-size: 24px;
     line-height: 1.42;
     letter-spacing: 1.3px;
@@ -830,6 +831,7 @@
       width: 100%;
       height: 100%;
       padding: 21px;
+      font-size: 18px;
       &:after {
         @include abs-align-y;
         right: 30px;
