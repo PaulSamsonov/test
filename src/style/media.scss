@@ -20,6 +20,9 @@
       font-size: 54px;
     }
   }
+  .section-home {
+    background-size: contain;
+  }
   .roadmap-section {
     .roadmap-item {
       padding: 45px;
@@ -30,7 +33,7 @@
   }
   .graphic-section {
     .token-graphic-descr {
-      font-size: 38px;
+      font-size: 36px;
     }
   }
   .ts-facts-section {
@@ -62,10 +65,181 @@
       }
     }
   }
+  .token-sale-section {
+    .main-block-title {
+      font-size: 50px;
+    }
+    .main-block-descr {
+      font-size: 25px;
+    }
+    .sub-block {
+      font-size: 18px;
+
+      .arr-link {
+        font-size: 1em;
+      }
+      .sub-block-text {
+        font-size: 1.8em;
+        &.text-right {
+          margin-bottom: 25px;
+        }
+      }
+      .token-button {
+        font-size: 3.2em;
+      }
+    }
+  }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 992px) {
+  .main-title {
+    font-size: 36px;
+  }
+  .main-sub-title {
+    font-size: 20px;
+  }
+  .section-home {
+    margin-bottom: 170px;
+    .description {
+      font-size: 16px;
+      margin-bottom: 20%;
+    }
+    .arr-link {
+      display: none;
+    }
+  }
+  .menu-toggle {
+    display: inline-block;
+  }
+  .header {
+    .main-navigation {
+      display: none;
+    }
+  }
+  .section-title {
+    .top-text {
+      font-size: 60px;
+      margin-bottom: 3%;
+    }
+    .bottom-text {
+      font-size: 38px;
+    }
+  }
+  .discover-section {
+    .descr-title {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+    .section-descr {
+      .abs-container {
+        padding-left: 0;
+      }
+    }
+    .registration {
+      .registration-title {
+        font-size: 20px;
+        max-width: 50%;
+        line-height: 1.67;
+      }
+    }
+    .counter {
+      margin-bottom: 25px;
+    }
+  }
+  .arr-link {
+    font-size: 12px;
+  }
+  .quotation{
+    padding: 37px 0 0;
+    &:before, &:after {
+      width: 100px;
+      height: 80px;
+    }
+  }
+  .introducing-section {
+    .section-img {
+      width: 46%;
+    }
+  }
+  .token-sale-section {
+    margin-bottom: 120px;
+    .sub-block {
+      font-size: 11px;
+    }
+  }
+  .section-title {
+    margin-bottom: 50px;
+  }
+  .roadmap-section {
+    margin-bottom: 95px;
+    .roadmap-item {
+      padding: 20px;
+      img {
+        max-height: 150px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+    }
+    .item-title {
+      font-size: 20px;
+    }
+    .item-descr {
+      font-size: 16px;
+    }
+  }
+  .graphic-section {
+    .token-graphic-descr {
+      position: relative;
+      max-width: 100%;
+    }
+  }
+  .documents-section {
+    padding-top: 90px;
+    margin-bottom: 90px;
+    .doc-head {
+      margin-bottom: 25px;
+      height: 143px;
+      min-height: 0;
+      font-size: 20px;
 
+      img {
+        max-height: 100%;
+      }
+    }
+    .doc-number {
+      font-size: 52px;
+    }
+    .doc-title {
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
+    .arr-link {
+      font-size: 16px;
+    }
+  }
+  .ts-facts-section {
+    .ts-item {
+      padding: 30px;
+    }
+  }
+  .offering-section {
+    margin-bottom: 90px;
+  }
+  .reviews-slider {
+    .review {
+      padding: 40px 20px;
+    }
+    .carousel-control {
+      width: 50px;
+      height: 50px;
+    }
+    .carousel-control {
+      left: -25px;
+    }
+    .carousel-control-next {
+      right: -30px;
+    }
+  }
 }
 
 @media (max-width: 768px) {

@@ -47,6 +47,27 @@
   }
 }
 
+//mobile menu
+
+.menu-toggle {
+  display: none;
+  color: $white;
+  font-size: 20px;
+
+  .fa-times {
+    display: none;
+  }
+
+  &.active {
+    .fa-times {
+      display: inline-block;
+    }
+    .fa-bars {
+      display: none;
+    }
+  }
+}
+
 //home
 
 .section-home {
@@ -493,6 +514,7 @@
     letter-spacing: 1px;
     color: $white;
     text-transform: uppercase;
+    text-align: left;
   }
   .doc-head {
     margin-bottom: 70px;
