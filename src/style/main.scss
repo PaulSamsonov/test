@@ -64,9 +64,9 @@
     line-height: 1.42;
     letter-spacing: 1.3px;
   }
- .arr-link {
-   margin-bottom: 320px;
- }
+  .arr-link {
+    margin-bottom: 320px;
+  }
 }
 
 //discover section
@@ -715,14 +715,14 @@
 .media-section {
   margin-bottom: $section-sub-bottom;
   .media-texts {
-    margin-bottom: 60px;
+    margin-bottom: 35px;
     .col {
       line-height: 1.56;
       letter-spacing: 0.9px;
     }
   }
   .m-bottom {
-    margin-bottom: 118px;
+    margin-bottom: 100px;
   }
 }
 
@@ -788,7 +788,6 @@
       margin-bottom: 20px;
 
       .faq-content {
-        text-align: center;
         border: 2px solid $aqua;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -901,22 +900,34 @@
     flex-direction: column;
     align-items: center;
     border: none;
+    padding-bottom: 10px;
   }
   .modal-body {
     padding: 0 75px;
   }
+  .logo {
+    margin-bottom: 25px;
+    img {
+      max-width: 140px;
+    }
+  }
   .modal-title {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
-    line-height: 1.81;
-    letter-spacing: 1.4px;
-    margin-bottom: 10px;
+    line-height: 1.33;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  .modal-sub-title {
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
   }
   .whitelist-form {
-    margin-bottom: 30px;
+    padding-top: 15px;
   }
   .token-block {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     .sub-block-text {
       font-size: 20px;
       margin: 8px 0;
@@ -935,14 +946,13 @@
     min-width: 220px;
     letter-spacing: 1.5px;
   }
-  .inp {
+  .inp, .select2-container {
     @include placeholder {
       color: $white;
     }
     margin-bottom: 10px;
     letter-spacing: 1.8px;
-    font-size: 14px;
-    padding: 15px 10px;
+    font-size: 12px;
     font-weight: 700;
     width: 100%;
     padding: 10px;
@@ -952,10 +962,27 @@
     background-color: $transp;
     text-transform: uppercase;
   }
-  .form-check {
+  .form-inner-wrap {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+  }
+  .form-group {
+    margin-bottom: 40px;
+    .fow {
+      margin-bottom: 5px;
+    }
+  }
+  .form-check {
+    width: calc(100% - 240px);
+    padding-left: 0;
+    .check-wrap {
+      display: flex;
+      margin-bottom: 10px;
+
+      input {
+        margin: 1px 0;
+      }
+    }
   }
   .form-check-label {
     font-size: 10px;
@@ -967,139 +994,90 @@
       text-decoration: underline;
     }
   }
-  .logo {
-    img {
-      max-width: 140px;
-      margin-bottom: 10px;
+}
+
+.whitelist-send {
+  .modal-title {
+    margin-bottom: 40px;
+  }
+  .modal-body {
+    padding-bottom: 60px;
+    .modal-secondary-btn {
+      text-align: center;
+      padding: 5px 15px;
+      border-radius: 15px;
+      background-color: $aqua;
+      font-size: 12px;
+      letter-spacing: 0.2px;
+      font-weight: 900;
+      line-height: 1.58;
+      color: $blue;
+      display: inline-flex;
+      align-items: center;
+    }
+    .telegram-button {
+      i {
+        font-size: 18px;
+        margin-right: 5px;
+      }
+    }
+    .col {
+      text-align: center;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.36;
+      color: $white;
     }
   }
 }
 
-.select2{
-  background-color: transparent;
-  border-bottom: 1px solid #fff;
-  margin-bottom: 10px !important;
-  padding: 10px 0;
+//select 2
 
-  .select2-container--default, .select2-selection--single{
-    background-color: transparent!important;
-    border: none!important;
+.select2 {
+  .select2-container--default, .select2-selection--single {
+    background-color: transparent !important;
+    border: none !important;
     color: $white;
 
-    .select2-selection__rendered{
-      color: $white!important;
+    .select2-selection__rendered {
+      padding-left: 0;
+      color: $white !important;
     }
 
-    .select2-selection__arrow{
-      height: 50px!important;
+    .select2-selection__arrow {
+      height: 50px !important;
 
-      &  b{
-        border-color: $white transparent transparent transparent!important;
+      & b {
+        border-color: $white transparent transparent transparent !important;
       }
     }
-
-
+  }
+  &.select2-container--open {
+    .select2-selection__arrow {
+      b {
+        border-color: transparent transparent $white transparent !important;
+      }
+    }
+  }
+  *:focus {
+    border: none;
+    outline: none;
   }
 }
 
-.select2-container{
-  .select2-dropdown{
-    background-color: $blue!important;
+.select2-container {
+  .select2-dropdown {
+    background-color: $blue !important;
 
-    .select2-results__option[aria-selected=true]{
-      background-color: $dark-blue!important;
+    .select2-results__option[aria-selected=true] {
+      background-color: $dark-blue !important;
     }
   }
 }
 
-.grecaptcha-badge{
+.grecaptcha-badge {
   display: none;
 }
-
-#modal-title{
-  width: 550px;
-  height: 50px;
-  font-family: Lato;
-  font-size: 30px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.33;
-  letter-spacing: 0.5px;
-  text-align: center;
-  color: #ffffff;
-}
-
-#modal-sub-title{
-  width: 500px;
-  height: 45px;
-  font-family: Lato;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.36;
-  letter-spacing: normal;
-  text-align: center;
-  color: #ffffff;
-}
-
-#whitelistModalSend{
-
-  #modal-title-send{
-    width: 500px;
-    height: 130px;
-    font-family: Lato;
-    font-size: 30px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.33;
-    letter-spacing: 0.5px;
-    text-align: center;
-    color: #ffffff
-  }
-
-  .modal-body{
-
-    padding-bottom: 30px;
-    padding-top: 20px;
-
-    .telegram-button{
-      text-align: center;
-      padding: 0 10px;
-      border-radius: 12px;
-      background-color: #42faff;
-
-      i{
-        margin: 0 5px;
-      }
-    }
-    .bitwala-button{
-      text-align: center;
-      width: 90px;
-      height: 27px;
-      border-radius: 12px;
-      background-color: #42faff;
-    }
-
-    p{
-      width: 168px;
-      height: 45px;
-      font-family: Lato;
-      font-size: 14px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.36;
-      letter-spacing: normal;
-      text-align: left;
-      color: #ffffff;
-    }
-
-  }
-
-}
-
 
 @import "media";
