@@ -1,7 +1,9 @@
 jQuery(document).ready(function ($) {
   //----- Variable
   var failList = ['algerian', 'bahamian', 'bangladeshi', 'bolivian', 'batswana', 'ethiopian', 'chinese', 'cuban', 'ecuadorean', 'ghanaian', 'iranian', 'jordanian', 'macedonian', 'moroccan', 'nepalese', 'north_korean', 'pakistani', 'serbian', 'sri_lankan', 'syrian', 'sudanese', 'trinidadian_or_tobagonian', 'tunisian', 'american', 'venezuelan', 'yemeni'
-  ], email, firstName, lastName, nationality, tokenButtons, toNewsletter, termsAndConditions, recaptcha = false;
+    ], email, firstName, lastName, nationality, tokenButtons, toNewsletter, termsAndConditions,
+    recaptcha = false,
+    fileData = false;
 
   //----- Events
 
@@ -119,6 +121,69 @@ jQuery(document).ready(function ($) {
 
   });
 
+  window.onscroll = function () {
+    var sticky = 20;
+    var header = $("#mainHeader");
+
+    if (window.pageYOffset > sticky) {
+      header.addClass("sticky-header");
+
+    } else {
+      header.removeClass("sticky-header");
+    }
+  };
+
+  $('.document-download').on('click', function (e) {
+    e.preventDefault();
+
+    fileData = {
+      name: $(this).data('doc-name').toLowerCase(),
+      link:  $(this).attr('href')
+  };
+
+    $('#registerModal').modal('show');
+
+  });
+
+  $('.show-register-form').on('click', function (e) {
+    e.preventDefault();
+
+    $('#registerModal').modal('hide');
+
+    setTimeout(function () {
+      $('#whitelistModal').modal('show');
+    }, 500);
+
+  });
+
+  $('.show-download-modal').on('click', function (e) {
+    e.preventDefault();
+    var downloadModal = $('#downloadModal');
+
+    $('#registerModal').modal('hide');
+
+    downloadModal.find('.btn').attr('href', fileData.link).text('Download ' + capitalizeFirstLetter(fileData.name));
+    setTimeout(function () {
+      downloadModal.modal('show');
+    }, 500)
+  });
+
+  $('.show-thanks-modal').on('click', function (e) {
+    e.preventDefault();
+
+    $('#downloadModal').modal('hide');
+    $('#checkModal').modal('hide');
+
+    setTimeout(function () {
+      $('#whitelistModalSend').find('.modal-title').html('Thank you!<br>In the meantime, you can...').end().modal('show');
+    }, 500);
+
+  });
+
+  $('.show-whitelist-modal').on('click', function (e) {
+    fileData = false;
+  });
+
   //----- Functions
 
   // Add contact to global list
@@ -152,7 +217,15 @@ jQuery(document).ready(function ($) {
           addToList(res.persisted_recipients, 6489205);
         }
         $('#whitelistModal').modal('hide');
-        $('#whitelistModalSend').modal('show');
+
+        if (fileData) {
+          setTimeout(function () {
+            $('#checkModal').find('.btn').attr('href', fileData.link).text('Download ' + capitalizeFirstLetter(fileData.name)).end().modal('show');
+          }, 500)
+
+        } else {
+          $('#whitelistModalSend').find('.modal-title').html('Please check your email, we will contact you shortly with more information!').end().modal('show');
+        }
       },
       error: function (error) {
         console.log(error.responseText);
@@ -194,21 +267,8 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  //sticky header
-
-  var header = $("#mainHeader");
-  var sticky = 20;
-  window.onscroll = function () {
-    stickyHeader();
-  };
-
-  function stickyHeader() {
-    if (window.pageYOffset > sticky) {
-      header.addClass("sticky-header");
-
-    } else {
-      header.removeClass("sticky-header");
-    }
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
 });
