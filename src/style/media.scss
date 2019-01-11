@@ -380,7 +380,157 @@
 }
 
 @media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+  .section-title {
+    margin-bottom: 30px;
+  }
+  .sub-section-title {
+    margin-bottom: 30px;
+  }
+  .section-home {
+    .home-descr {
+      max-width: 100%;
+      letter-spacing: 0.9px;
+    }
+  }
+  .discover-section {
+    .inner-wrap {
+      max-width: 157px;
+    }
+    .descr-title {
+      font-size: 18px;
+    }
+    .counter {
+      .count {
+        font-size: 36px;
+      }
+      .descr {
+        font-size: 12px;
+      }
+    }
+    .registration {
+      .registration-title {
+        font-size: 12px;
+      }
+    }
+    .abs-container {
+      background-size: 250px;
+    }
+  }
+  .partners-section {
+    .partner-item{
+      height: auto;
+      border: none !important;
+      margin: 20px 0;
+      img {
+        max-width: 100px;
+      }
+      &.crop-corners {
+        &:after, &:before {
+          display: none;
+        }
+      }
+    }
+  }
+  .reviews-section{
+    .inner-img {
+      height: 200px;
+      overflow: hidden;
+      .review-logo {
+        max-width: 147px;
+      }
+    }
+    .reviews-slider{
+      .carousel-control{
+        top: 97px;
+      }
+      .carousel-control-next {
+        right: -8px;
+      }
+      .carousel-control-prev {
+        left: -8px;
+      }
+      .review-author{
+        padding-left: 45px;
+        letter-spacing: .7px;
+        &:after {
+          width: 35px;
+        }
+      }
+      .carousel-indicators {
+        margin: 25px 0 0;
+        flex-wrap: wrap;
+        li {
+          width: 30%;
+          margin: 10px 0;
+        }
+      }
+    }
+    .review-text {
+      font-size: 14px;
+    }
+  }
+  .team-section {
+    .team-member {
+      font-size: 12px;
+      .overlay {
+        padding: 40px 25px;
+      }
+      .position {
+        padding-bottom: 25px;
+      }
+      .descr {
+        margin-bottom: 25px;
+      }
+    }
+    .invitation {
+      font-size: 16px;
+      line-height: 1.44;
+    }
+  }
+  .media-section {
+    .media-texts {
+      .col {
+        margin: 0 0 30px 0;
+        padding-bottom: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .img-wrap {
+        height: auto;
+        @include drop-abs-pos;
+      }
+    }
+  }
+  .faq-section {
+    .faq-accordion {
+      .btn-link {
+        font-size: 14px;
 
+        &:after {
+          font-size: 27px;
+          right: 10px;
+        }
+      }
+      .card-body {
+        padding: 20px;
+        font-size: 14px;
+      }
+    }
+  }
+  .footer {
+    .footer-body {
+      .footer-logo {
+        text-align: left;
+      }
+      .col-6 {
+        padding: 15px;
+      }
+    }
+  }
 }
 
 @media (max-width: 460px) {
