@@ -193,4 +193,22 @@ jQuery(document).ready(function ($) {
       }
     }
   }
+
+  //sticky header
+
+  var header = $("#mainHeader");
+  var sticky = 20;
+  window.onscroll = function () {
+    stickyHeader();
+  };
+
+  function stickyHeader() {
+    if (window.pageYOffset > sticky) {
+      header.addClass("sticky-header");
+
+    } else {
+      header.removeClass("sticky-header");
+    }
+  }
+
 });
