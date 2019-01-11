@@ -97,3 +97,10 @@ $lora: Lora, sans-serif;
   }
 }
 
+@mixin drop-abs-pos {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(0);
+}
+

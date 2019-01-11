@@ -152,11 +152,8 @@
         display: none;
       }
       .abs-container {
+        @include drop-abs-pos;
         background: url("../images/mobile-screens.png") center right/contain no-repeat;
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: translate(0);
         padding-left: 0;
       }
     }
@@ -265,7 +262,121 @@
 }
 
 @media (max-width: 768px) {
-
+  .section-title {
+    .top-text {
+      font-size: 36px;
+    }
+    .bottom-text {
+      font-size: 24px;
+      left: 30px;
+    }
+  }
+  .sub-section-title {
+    margin-bottom: 50px;
+    font-size: 24px;
+    padding-left: 0;
+  }
+  .quotation {
+    max-width: 100%;
+  }
+  .introducing-section {
+    .section-descr {
+      .abs-container {
+        @include drop-abs-pos;
+      }
+    }
+    .section-img {
+      display: none;
+    }
+    .section-img-mobile {
+      display: block;
+    }
+  }
+  .token-sale-section {
+    .container-fluid {
+      padding: 0;
+    }
+    .main-block {
+      padding: 20px 20px 70px;
+      &:after {
+        display: none;
+      }
+    }
+    .main-block-title {
+      font-size: 36px;
+    }
+    .main-block-descr {
+      font-size: 18px;
+    }
+    .sub-block {
+      font-size: 14px;
+      width: 100%;
+      padding-top: 40px;
+      .token-button {
+        padding: 24px 7px;
+      }
+    }
+  }
+  .roadmap-section {
+    .roadmap-item {
+      width: 340px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+  .graphic-section {
+    .token-graphic-image {
+      max-width: 100%;
+    }
+    .token-graphic {
+      margin-bottom: 90px;
+      .token-graphic-item {
+        width: 48%;
+        text-align: left;
+        .descr {
+          max-width: 100%;
+        }
+      }
+    }
+    .token-graphic-item {
+      font-size: 14px;
+      .separator {
+        display: none;
+      }
+      .token-graphic-icon {
+        margin-bottom: 20px;
+      }
+      &.third {
+        top: 10%;
+      }
+      &.second {
+        top: 58%;
+      }
+      &.fourth {
+        top: 58%;
+      }
+    }
+    .token-graphic-descr {
+      font-size: 36px;
+    }
+  }
+  .documents-section {
+    padding: 0 20px;
+    .document{
+      width: 338px;
+      margin: 0 auto;
+      max-width: 100%;
+      padding: 8% 20px;
+      &.disabled{
+        &:after {
+          top: 0;
+          right: 0;
+          height: 11%;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 576px) {
