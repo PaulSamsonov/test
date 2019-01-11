@@ -756,10 +756,24 @@
 .media-section {
   margin-bottom: $section-sub-bottom;
   .media-texts {
-    margin-bottom: 35px;
     .col {
       line-height: 1.56;
       letter-spacing: 0.9px;
+      position: relative;
+      padding-bottom: 90px;
+      margin: 50px 0;
+    }
+    .img-wrap {
+      @include abs-align-x;
+      position: absolute;
+      bottom: 0;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-height: 100%;
+      }
     }
   }
   .m-bottom {

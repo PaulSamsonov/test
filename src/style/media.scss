@@ -2,11 +2,6 @@
   body {
     font-size: 16px;
   }
-  .discover-section {
-    .descr-title {
-      font-size: 38px;
-    }
-  }
   .logo {
     img {
       max-width: 110px;
@@ -22,6 +17,11 @@
   }
   .section-home {
     background-size: contain;
+  }
+  .discover-section {
+    .descr-title {
+      font-size: 38px;
+    }
   }
   .roadmap-section {
     .roadmap-item {
@@ -41,7 +41,7 @@
       padding: 60px;
     }
   }
-  .reviews-slider {
+  .reviews-section {
     .carousel-indicators {
       li {
         img {
@@ -92,31 +92,27 @@
 }
 
 @media (max-width: 992px) {
+  .section,
+  .sub-section {
+    margin-bottom: 90px;
+  }
+  .header {
+    padding: 20px 0;
+    .main-navigation {
+      display: none;
+    }
+    .menu-toggle {
+      display: inline-block;
+    }
+  }
   .main-title {
     font-size: 36px;
   }
   .main-sub-title {
     font-size: 20px;
   }
-  .section-home {
-    margin-bottom: 170px;
-    .description {
-      font-size: 16px;
-      margin-bottom: 20%;
-    }
-    .arr-link {
-      display: none;
-    }
-  }
-  .menu-toggle {
-    display: inline-block;
-  }
-  .header {
-    .main-navigation {
-      display: none;
-    }
-  }
   .section-title {
+    margin-bottom: 50px;
     .top-text {
       font-size: 60px;
       margin-bottom: 3%;
@@ -125,13 +121,42 @@
       font-size: 38px;
     }
   }
+  .arr-link {
+    font-size: 12px;
+  }
+  .quotation{
+    padding: 37px 0 0;
+    &:before, &:after {
+      width: 100px;
+      height: 80px;
+    }
+  }
+  .section-home {
+    padding-bottom: 100px;
+    margin-bottom: 70px;
+    .description {
+      font-size: 16px;
+      margin-bottom: 20%;
+    }
+    .arr-link {
+      display: none;
+    }
+  }
   .discover-section {
     .descr-title {
       font-size: 28px;
       margin-bottom: 25px;
     }
     .section-descr {
+      .section-img {
+        display: none;
+      }
       .abs-container {
+        background: url("../images/mobile-screens.png") center right/contain no-repeat;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
         padding-left: 0;
       }
     }
@@ -146,32 +171,17 @@
       margin-bottom: 25px;
     }
   }
-  .arr-link {
-    font-size: 12px;
-  }
-  .quotation{
-    padding: 37px 0 0;
-    &:before, &:after {
-      width: 100px;
-      height: 80px;
-    }
-  }
   .introducing-section {
     .section-img {
       width: 46%;
     }
   }
   .token-sale-section {
-    margin-bottom: 120px;
     .sub-block {
       font-size: 11px;
     }
   }
-  .section-title {
-    margin-bottom: 50px;
-  }
   .roadmap-section {
-    margin-bottom: 95px;
     .roadmap-item {
       padding: 20px;
       img {
@@ -195,7 +205,6 @@
   }
   .documents-section {
     padding-top: 90px;
-    margin-bottom: 90px;
     .doc-head {
       margin-bottom: 25px;
       height: 143px;
@@ -222,10 +231,13 @@
       padding: 30px;
     }
   }
-  .offering-section {
-    margin-bottom: 90px;
+  .team-section {
+    .team-member {
+      height: 340px;
+      overflow: hidden;
+    }
   }
-  .reviews-slider {
+  .reviews-section {
     .review {
       padding: 40px 20px;
     }
@@ -233,11 +245,21 @@
       width: 50px;
       height: 50px;
     }
-    .carousel-control {
+    .carousel-control-зкум {
       left: -25px;
     }
     .carousel-control-next {
       right: -30px;
+    }
+  }
+  .events-section {
+    .event-name {
+      font-size: 18px;
+    }
+  }
+  .footer {
+    .footer-body {
+      padding: 38px 0;
     }
   }
 }
