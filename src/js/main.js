@@ -121,18 +121,19 @@ jQuery(document).ready(function ($) {
 
   });
 
+  // Sticky slider on scrolling
   window.onscroll = function () {
     var sticky = 20;
     var header = $("#mainHeader");
 
     if (window.pageYOffset > sticky) {
       header.addClass("sticky-header");
-
     } else {
       header.removeClass("sticky-header");
     }
   };
 
+  // Call modal proposition of registration
   $('.document-download').on('click', function (e) {
     e.preventDefault();
 
@@ -145,6 +146,7 @@ jQuery(document).ready(function ($) {
 
   });
 
+  // Show register form before downloading document
   $('.show-register-form').on('click', function (e) {
     e.preventDefault();
 
@@ -156,6 +158,7 @@ jQuery(document).ready(function ($) {
 
   });
 
+  // Show download modal and set data for downloading
   $('.show-download-modal').on('click', function (e) {
     e.preventDefault();
     var downloadModal = $('#downloadModal');
@@ -168,6 +171,7 @@ jQuery(document).ready(function ($) {
     }, 500)
   });
 
+  // Show thank you modal after downloading
   $('.show-thanks-modal').on('click', function () {
 
     $('#downloadModal').modal('hide');
@@ -179,7 +183,8 @@ jQuery(document).ready(function ($) {
 
   });
 
-  $('.show-whitelist-modal').on('click', function (e) {
+  // Show thank you modal after registration
+  $('.show-whitelist-modal').on('click', function () {
     fileData = false;
   });
 
