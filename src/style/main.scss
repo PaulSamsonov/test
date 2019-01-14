@@ -945,8 +945,10 @@
 
 .whitelist-modal {
   .modal-dialog {
-    max-width: 650px;
-    margin-top: 6rem;
+    max-width: 100%;
+    width: 650px;
+    margin: 6rem auto;
+    padding: 0 15px;
   }
   .modal-content {
     background-color: $blue;
@@ -1079,6 +1081,11 @@
         font-size: 18px;
         margin-right: 5px;
       }
+    }
+    .bitwala-button {
+      height: 27px;
+      width: 90px;
+      padding: 10px;
     }
     .col {
       text-align: center;
