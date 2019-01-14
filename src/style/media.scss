@@ -124,7 +124,7 @@
   .arr-link {
     font-size: 12px;
   }
-  .quotation{
+  .quotation {
     padding: 37px 0 0;
     &:before, &:after {
       width: 100px;
@@ -265,6 +265,7 @@
   .section-title {
     .top-text {
       font-size: 36px;
+      letter-spacing: -1.1px;
     }
     .bottom-text {
       font-size: 24px;
@@ -361,13 +362,17 @@
     }
   }
   .documents-section {
-    padding: 0 20px;
-    .document{
+    padding: 0 15px;
+    margin-bottom: 0;
+    .sub-section-title {
+      margin-bottom: 50px;
+    }
+    .document {
       width: 338px;
       margin: 0 auto;
       max-width: 100%;
       padding: 8% 20px;
-      &.disabled{
+      &.disabled {
         &:after {
           top: 0;
           right: 0;
@@ -383,49 +388,239 @@
   body {
     font-size: 14px;
   }
+  .main-title {
+    letter-spacing: 0.6px;
+  }
+  .main-sub-title {
+    line-height: 1.5;
+  }
   .section-title {
     margin-bottom: 30px;
+  }
+  .marker {
+    font-size: 10px;
+    padding-top: 6px;
   }
   .sub-section-title {
     margin-bottom: 30px;
   }
+  .learn-more-link {
+    font-size: 10px;
+    .icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .arr-link {
+    letter-spacing: 1px;
+  }
+  .common-bg {
+    background-position-y: 18%;
+  }
+  .quotation {
+    .text {
+      font-size: 16px;
+      line-height: 1.38;
+    }
+    .sign {
+      font-size: 12px;
+    }
+  }
   .section-home {
+    padding-bottom: 0;
+    margin-bottom: 180px;
+    background-size: 263px;
+    background-position: 114% 53%;
     .home-descr {
       max-width: 100%;
-      letter-spacing: 0.9px;
+      .description {
+        letter-spacing: 0.9px;
+      }
+    }
+    .learn-more-link {
+      @include after-elem;
+      .text {
+        display: none;
+      }
+      &:after {
+        content: 'Learn more or get whitelisted';
+        left: 43px;
+        letter-spacing: 0.8px;
+      }
     }
   }
   .discover-section {
+    .section-title {
+      margin-bottom: 30px;
+    }
+    .section-descr {
+      .abs-container {
+        padding-left: 15px;
+        background-size: 275px;
+        background-position-x: 169%;
+      }
+    }
     .inner-wrap {
       max-width: 157px;
     }
     .descr-title {
       font-size: 18px;
+      letter-spacing: normal;
     }
     .counter {
       .count {
         font-size: 36px;
+        line-height: normal;
+        letter-spacing: normal;
       }
       .descr {
         font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: 0.6px;
+        padding-right: 10px;
       }
     }
     .registration {
       .registration-title {
         font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: 0.3px;
+        max-width: 100%;
       }
     }
-    .abs-container {
-      background-size: 250px;
+  }
+  .token-sale-section {
+    .main-block-descr {
+      max-width: 100%;
+      line-height: 1.67;
+      letter-spacing: 0.9px;
+    }
+    .sub-block {
+      padding: 40px 10px 20px;
+      .token-button {
+        font-size: 36px;
+        letter-spacing: 1.1px;
+      }
+      .sub-block-text {
+        font-size: 24px;
+        letter-spacing: 1.3px;
+
+        &.text-right {
+          margin-bottom: 30px;
+        }
+      }
+      .arr-link {
+        font-size: 12px;
+      }
+    }
+  }
+  .roadmap-section {
+    .item-title {
+      margin-bottom: 15px;
+    }
+    .col {
+      padding: 7px 15px;
+    }
+  }
+  .graphic-section {
+    background-position-y: 8%;
+    margin-bottom: 45px;
+    .section-title {
+      margin-bottom: 120px;
+    }
+    .token-graphic {
+      .token-graphic-item {
+        .token-graphic-icon {
+          width: auto;
+          height: 30px;
+        }
+        .descr {
+          font-size: 14px;
+          line-height: 1.21;
+          letter-spacing: 0.7px;
+        }
+        &.fourth, &.second {
+          top: 42%;
+        }
+      }
+    }
+    .token-graphic-image {
+      min-height: 400px;
+      text-align: center;
+      img {
+        max-width: 90%;
+      }
+    }
+  }
+  .documents-section {
+    .container {
+      padding: 0;
+    }
+    .document {
+      padding: 42px 20px;
+    }
+  }
+  .ts-facts-section {
+    .sub-section-title {
+      margin-bottom: 55px;
+    }
+    .ts-item {
+      padding: 30px 12px;
+    }
+    .ts-icon {
+      max-height: 55px;
+      width: auto;
+      &.fix-width {
+        width: 65px;
+        margin: 15px 0 42px;
+      }
+    }
+    .ts-item-title {
+      font-size: 16px;
+    }
+    .ts-item-descr {
+      font-size: 12px;
+      br {
+        display: none;
+      }
+    }
+    .ts-items {
+      &.subtotal {
+        margin-top: 15px;
+
+        .ts-item {
+          padding: 36px 15px 15px 27px;
+        }
+        .ts-item-title-wrap {
+          margin-bottom: 18px;
+        }
+        .ts-item-title {
+          font-size: 24px;
+          margin-bottom: 0;
+        }
+        .ts-item-descr {
+          font-size: 14px;
+          margin-bottom: 24px;
+        }
+      }
+    }
+    .ts-item-table {
+      td, th {
+        padding: 10px 0;
+      }
+      td {
+        width: 50%;
+        font-size: 16px;
+      }
     }
   }
   .partners-section {
-    .partner-item{
+    .partner-item {
       height: auto;
       border: none !important;
       margin: 20px 0;
       img {
-        max-width: 100px;
+        max-width: 110px;
       }
       &.crop-corners {
         &:after, &:before {
@@ -434,7 +629,10 @@
       }
     }
   }
-  .reviews-section{
+  .reviews-section {
+    .review {
+      padding-bottom: 65px;
+    }
     .inner-img {
       height: 200px;
       overflow: hidden;
@@ -442,8 +640,8 @@
         max-width: 147px;
       }
     }
-    .reviews-slider{
-      .carousel-control{
+    .reviews-slider {
+      .carousel-control {
         top: 97px;
       }
       .carousel-control-next {
@@ -452,7 +650,7 @@
       .carousel-control-prev {
         left: -8px;
       }
-      .review-author{
+      .review-author {
         padding-left: 45px;
         letter-spacing: .7px;
         &:after {
@@ -463,7 +661,7 @@
         margin: 25px 0 0;
         flex-wrap: wrap;
         li {
-          width: 30%;
+          width: 33%;
           margin: 10px 0;
         }
       }
@@ -471,8 +669,17 @@
     .review-text {
       font-size: 14px;
     }
+
   }
   .team-section {
+    .section-title {
+      .top-text {
+        margin-bottom: 12%;
+      }
+    }
+    .team-members {
+      margin-bottom: 15px;
+    }
     .team-member {
       font-size: 12px;
       .overlay {
@@ -530,6 +737,9 @@
         padding: 15px;
       }
     }
+  }
+  .subscribe-section {
+    display: none;
   }
 }
 
