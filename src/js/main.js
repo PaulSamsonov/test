@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
   //anchor links
   $('.main-nav a[href*="#"], .anchor').click(function (event) {
     $('html, body').animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 100
+      scrollTop: $($.attr(this, 'href')).offset().top - 200
     }, 500);
     event.preventDefault();
   });
@@ -72,6 +72,21 @@ jQuery(document).ready(function ($) {
       addToAllContacts();
     }
 
+  });
+
+  //mobile navigation
+  $('.menu-toggle').on('click', function () {
+    $(this).toggleClass('active');
+    $('body').toggleClass('fixed');
+    $('.main-navigation').fadeToggle('slow');
+  });
+
+  $('.main-navigation li a').on('click', function () {
+    if ($(window).width() <= 992) {
+      $('body').toggleClass('fixed');
+      $('.menu-toggle').toggleClass('active');
+      $('.main-navigation').fadeToggle('slow');
+    }
   });
 
   // Switch investor type on popup
