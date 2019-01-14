@@ -48,6 +48,23 @@ ul {
   }
 }
 
+.secondary-theme-btn {
+  width: 180px;
+  height: 45px;
+  padding: 9px;
+  color: $aqua;
+  background-color: $transp;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  border: 2px solid $aqua;
+
+  &:hover {
+    background-color: $aqua;
+    color: $dark-blue;
+  }
+}
+
 .common-bg {
   background: url(../images/token-graph-bg.png) 0 292px/100% auto no-repeat;
 }
@@ -245,5 +262,63 @@ ul {
 
   a {
     color: darkred !important;
+  }
+}
+
+.theme-modal {
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: $white;
+    z-index: 20;
+    opacity: 1;
+  }
+  .logo {
+    margin-bottom: 30px;
+    img {
+      max-width: 123px;
+    }
+  }
+  .modal-content {
+    background-color: $blue;
+    padding: 20px;
+    border-radius: 0;
+    text-align: center;
+    color: $white;
+  }
+  .modal-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.33;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .modal-dialog {
+    max-width: 650px;
+    margin-top: 5rem;
+  }
+  .btn-wrap {
+    width: 290px;
+    max-width: 100%;
+    margin: 0 auto 65px;
+    .btn {
+      width: 100%;
+    }
+  }
+  .m-bottom {
+    margin-bottom: 25px;
+  }
+  .l-bottom {
+    margin-bottom: 40px;
+  }
+  .modal-link {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-align: center;
+    color: $aqua;
+    text-decoration: underline;
   }
 }
