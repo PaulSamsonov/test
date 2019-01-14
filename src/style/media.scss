@@ -842,6 +842,38 @@
   }
 }
 
-@media (max-width: 460px) {
-
+@media (max-width: 360px) {
+  .main-title {
+    font-size: 29px;
+  }
+  .section-title {
+    .top-text {
+      font-size: 32px;
+    }
+    .bottom-text {
+      font-size: 18px;
+    }
+  }
+  .discover-section {
+    .section-descr {
+      .abs-container {
+        background-size: 224px;
+      }
+    }
+  }
+  .token-sale-section {
+    .sub-block {
+      .token-button {
+        font-size: 24px;
+      }
+    }
+  }
+  .faq-section {
+    .faq-accordion {
+      .btn-link {
+        font-size: 12px;
+        padding: 10px;
+      }
+    }
+  }
 }
