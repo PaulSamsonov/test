@@ -1100,7 +1100,7 @@
     color: $white;
 
     .select2-selection__rendered {
-      padding-left: 0;
+      padding-left: 0 !important;
       color: $white !important;
     }
 

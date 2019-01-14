@@ -422,6 +422,49 @@
       }
     }
   }
+  .whitelist-modal {
+    .logo {
+      margin-bottom: 15px;
+      img {
+        max-width: 95px;
+      }
+    }
+    .close {
+      font-size: 28px;
+    }
+    .modal-dialog {
+      max-width: 100%;
+      margin: 15px;
+    }
+    .modal-title {
+      font-size: 20px;
+    }
+    .modal-body {
+      padding: 0 15px;
+    }
+    .token-block {
+      margin-bottom: 15px;
+      .token-button {
+        font-size: 24px;
+        padding: 6px;
+      }
+    }
+    .whitelist-form {
+      padding-top: 0;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-inner-wrap {
+      flex-wrap: wrap;
+      .btn {
+        margin: 0 auto 20px;
+      }
+    }
+    .form-check {
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 576px) {
