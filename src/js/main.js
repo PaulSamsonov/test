@@ -168,8 +168,7 @@ jQuery(document).ready(function ($) {
     }, 500)
   });
 
-  $('.show-thanks-modal').on('click', function (e) {
-    e.preventDefault();
+  $('.show-thanks-modal').on('click', function () {
 
     $('#downloadModal').modal('hide');
     $('#checkModal').modal('hide');
