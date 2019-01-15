@@ -719,6 +719,17 @@
       max-height: 150px;
       max-width: 70%;
     }
+    .hov-img {
+      display: none;
+    }
+    &:hover {
+      .hov-img {
+        display: inline-block;
+      }
+      .def-img {
+        display: none;
+      }
+    }
     .partner-link {
       text-align: center;
       width: 100%;
