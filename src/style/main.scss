@@ -977,6 +977,10 @@
     padding: 20px 0;
     font-size: 11px;
     color: $light-grey;
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
   }
 }
 
