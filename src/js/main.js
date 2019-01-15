@@ -3,7 +3,8 @@ jQuery(document).ready(function ($) {
   var failList = ['algerian', 'bahamian', 'bangladeshi', 'bolivian', 'batswana', 'ethiopian', 'chinese', 'cuban', 'ecuadorean', 'ghanaian', 'iranian', 'jordanian', 'macedonian', 'moroccan', 'nepalese', 'north_korean', 'pakistani', 'serbian', 'sri_lankan', 'syrian', 'sudanese', 'trinidadian_or_tobagonian', 'tunisian', 'american', 'venezuelan', 'yemeni'
     ], email, firstName, lastName, nationality, tokenButtons, toNewsletter, termsAndConditions,
     recaptcha = false,
-    fileData = false;
+    fileData = false,
+    APIKEY = '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';
 
   //----- Events
 
@@ -222,14 +223,16 @@ jQuery(document).ready(function ($) {
       method: 'POST',
       beforeSend: function (xhr) {
         xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.setRequestHeader('Authorization', 'Bearer  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');
+        xhr.setRequestHeader('Authorization', 'Bearer ' + APIKEY);
       },
       data: JSON.stringify(arr),
       success: function (res) {
         if (failList.indexOf(nationality) === -1) {
           addToList(res.persisted_recipients, 6488806);
+            sendEmail(email.val());
         } else {
           addToList(res.persisted_recipients, 6498852);
+          sendEmail(email.val());
         }
 
         if (toNewsletter) {
@@ -260,10 +263,42 @@ jQuery(document).ready(function ($) {
       method: 'POST',
       beforeSend: function (xhr) {
         xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.setRequestHeader('Authorization', 'Bearer  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');
+        xhr.setRequestHeader('Authorization', 'Bearer ' + APIKEY);
       },
       success: function () {
       },
+      error: function (error) {
+        console.log(error.responseText);
+      }
+    });
+  }
+
+  // Add to pre-whitelist or fail-list or newsletter
+  function sendEmail (email) {
+
+    var data = {
+      "personalizations": [
+        {
+          "to": [
+            {
+              "email": email
+            }
+          ]
+        }
+      ],
+      "from": {
+        "email": "invest@bitwala.com"
+      },
+      "template_id": "d-1adbe6ab40f94c4a84eaa436c3220084"
+    };
+    $.ajax({
+      url: 'https://api.sendgrid.com/v3/mail/send',
+      method: 'POST',
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('Authorization', 'Bearer ' + APIKEY);
+      },
+      data: JSON.stringify(data),
       error: function (error) {
         console.log(error.responseText);
       }
