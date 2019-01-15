@@ -57,14 +57,6 @@
       max-width: 100%;
     }
   }
-  .team-section {
-    .team-member {
-      font-size: 14px;
-      .overlay {
-        padding: 25px;
-      }
-    }
-  }
   .token-sale-section {
     .main-block-title {
       font-size: 50px;
@@ -92,6 +84,17 @@
   .events-section {
     .event-name {
       font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .team-section {
+    .team-member {
+      font-size: 13px;
+      .overlay {
+        padding: 15px;
+      }
     }
   }
 }
@@ -728,7 +731,7 @@
     .team-member {
       font-size: 12px;
       .overlay {
-        padding: 40px 25px;
+        padding: 25px;
       }
       .position {
         padding-bottom: 25px;
@@ -865,6 +868,13 @@
     .sub-block {
       .token-button {
         font-size: 24px;
+      }
+    }
+  }
+  .team-section {
+    .team-member {
+      .overlay {
+        padding: 10px 15px;
       }
     }
   }

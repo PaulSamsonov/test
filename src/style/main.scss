@@ -646,7 +646,7 @@
       height: 100%;
       background-color: $blue;
       color: $white;
-      padding: 42px 25px;
+      padding: 20px 25px;
       transition: all 0.3s;
       border-radius: 3px;
     }
@@ -666,7 +666,7 @@
       letter-spacing: 0.9px;
       position: relative;
       padding-bottom: 15px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       &:after {
         left: 0;
         bottom: 0;
@@ -677,9 +677,8 @@
     }
 
     .descr {
-      font-size: 1em;
+      font-size: 0.875em;
       line-height: 1.44;
-      letter-spacing: 0.8px;
       margin-bottom: 15px;
     }
     &:hover {
