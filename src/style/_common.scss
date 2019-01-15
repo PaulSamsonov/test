@@ -74,6 +74,9 @@ ul {
     background-color: $transp;
     color: $blue;
   }
+  &:focus, &:active {
+    color: $white;
+  }
 }
 
 .common-bg {
