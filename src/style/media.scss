@@ -187,7 +187,7 @@
       margin-bottom: 20%;
     }
     .arr-link {
-      display: none;
+      margin-bottom: 40px;
     }
   }
   .discover-section {
@@ -481,7 +481,7 @@
   }
   .section-home {
     padding-bottom: 0;
-    margin-bottom: 180px;
+    margin-bottom: 140px;
     background-size: 263px;
     background-position: 114% 53%;
     .home-descr {
@@ -491,7 +491,7 @@
       }
     }
     .learn-more-link {
-      @include after-elem;
+      /*@include after-elem;
       .text {
         display: none;
       }
@@ -499,7 +499,7 @@
         content: 'Learn more or get whitelisted';
         left: 43px;
         letter-spacing: 0.8px;
-      }
+      }*/
     }
   }
   .discover-section {
