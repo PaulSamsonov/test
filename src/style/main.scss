@@ -638,7 +638,6 @@
     font-size: 16px;
 
     .overlay {
-      opacity: 0;
       position: absolute;
       top: 0;
       left: 0;
@@ -647,7 +646,6 @@
       background-color: $blue;
       color: $white;
       padding: 20px 25px;
-      transition: all 0.3s;
       border-radius: 3px;
     }
 
@@ -680,11 +678,6 @@
       font-size: 0.875em;
       line-height: 1.44;
       margin-bottom: 15px;
-    }
-    &:hover {
-      .overlay {
-        opacity: 1;
-      }
     }
   }
   .invitation {

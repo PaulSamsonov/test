@@ -207,6 +207,10 @@ jQuery(document).ready(function ($) {
     fileData = false;
   });
 
+  $('.team-member').on('click', function () {
+    $(this).find('.overlay').fadeToggle();
+  });
+
   //----- Functions
 
   // Add contact to global list
