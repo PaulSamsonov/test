@@ -307,6 +307,11 @@
       padding: 38px 0;
     }
   }
+  .subscribe-section {
+    .subscribe-title {
+      font-size: 36px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -841,6 +846,18 @@
     }
     .inner-title {
       min-height: 38px;
+    }
+  }
+  .subscribe-section {
+    .subscribe-block {
+      padding: 35px 10px;
+    }
+    .subscribe-title {
+      font-size: 26px;
+    }
+    .subscribe-descr {
+      font-size: 16px;
+      margin-bottom: 20px;
     }
   }
 }

@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "dependencies": {
+    "aos": "^2.3.4",
     "body-parser": "^1.18.3",
     "bodymovin": "^4.13.0",
     "bootstrap": "^4.2.1",

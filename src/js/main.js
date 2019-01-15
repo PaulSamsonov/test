@@ -91,6 +91,9 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  //aos init
+  AOS.init();
+
   // Switch investor type on popup
   $('#tokenButtons').on('click', '.token-button', function (e) {
     e.preventDefault();

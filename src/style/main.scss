@@ -909,6 +909,9 @@
   }
 }*/
 .subscribe-section {
+  &.section {
+    margin-bottom: 0;
+  }
   .subscribe-block {
     background-color: $aqua;
     text-align: center;
