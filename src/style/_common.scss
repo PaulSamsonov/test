@@ -30,38 +30,45 @@ ul {
   list-style: none;
 }
 
-.primary-theme-btn {
+.btn {
   width: 180px;
   height: 45px;
   padding: 9px;
-  color: #000;
-  background-color: $aqua;
   border-radius: 50px;
   letter-spacing: 1px;
   font-weight: 900;
-  border: 2px solid transparent;
+  border: 2px solid $transp;
+}
+
+.primary-theme-btn {
+  color: #000;
+  background-color: $aqua;
 
   &:hover {
-    background-color: transparent;
+    background-color: $transp;
     border-color: $aqua;
     color: $aqua;
   }
 }
 
 .secondary-theme-btn {
-  width: 180px;
-  height: 45px;
-  padding: 9px;
   color: $aqua;
   background-color: $transp;
-  border-radius: 50px;
-  letter-spacing: 1px;
-  font-weight: 900;
-  border: 2px solid $aqua;
+  border-color: $aqua;
 
   &:hover {
     background-color: $aqua;
     color: $dark-blue;
+  }
+}
+
+.dark-theme-btn {
+  color: $white;
+  background-color: $blue;
+  border-color: $blue;
+  &:hover {
+    background-color: $transp;
+    color: $blue;
   }
 }
 
