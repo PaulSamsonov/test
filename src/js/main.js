@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
     firstName = $('#firstName');
     lastName = $('#lastName');
     nationality = $('#nationality');
-    tokenButtons = $('#tokenButtons .active').text();
+    tokenButtons = $('#tokenButtons .active').data('investor-type');
     toNewsletter = $('#addToNews').prop('checked');
     termsAndConditions = $('#termsAndCond');
 
