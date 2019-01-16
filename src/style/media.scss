@@ -42,13 +42,6 @@
     }
   }
   .reviews-section {
-    .carousel-indicators {
-      li {
-        img {
-          max-width: 70%;
-        }
-      }
-    }
     .bg-img {
       min-height: 100%;
       min-width: 100%;
@@ -284,7 +277,7 @@
   }
   .reviews-section {
     .review {
-      padding: 40px 20px;
+      padding: 20px;
     }
     .carousel-control {
       width: 50px;
@@ -432,6 +425,17 @@
           height: 11%;
           width: 100%;
         }
+      }
+    }
+  }
+  .reviews-section {
+    .review-author {
+      font-size: 14px;
+    }
+    .carousel-indicators {
+      li {
+        width: 35%;
+        margin: 0 5%;
       }
     }
   }
@@ -684,10 +688,10 @@
   }
   .reviews-section {
     .review {
-      padding-bottom: 65px;
+      height: 231px;
     }
     .inner-img {
-      height: 200px;
+      height: 260px;
       overflow: hidden;
       .review-logo {
         max-width: 147px;
@@ -695,7 +699,7 @@
     }
     .reviews-slider {
       .carousel-control {
-        top: 97px;
+        top: 131px;
       }
       .carousel-control-next {
         right: -8px;
@@ -706,17 +710,13 @@
       .review-author {
         padding-left: 45px;
         letter-spacing: .7px;
+        font-size: 13px;
         &:after {
           width: 35px;
         }
       }
       .carousel-indicators {
         margin: 25px 0 0;
-        flex-wrap: wrap;
-        li {
-          width: 33%;
-          margin: 10px 0;
-        }
       }
     }
     .review-text {
@@ -885,6 +885,16 @@
     .sub-block {
       .token-button {
         font-size: 24px;
+      }
+    }
+  }
+  .reviews-section {
+    .inner-img {
+      height: 220px;
+    }
+    .reviews-slider {
+      .carousel-control {
+        top: 100px;
       }
     }
   }

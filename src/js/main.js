@@ -207,9 +207,19 @@ jQuery(document).ready(function ($) {
     fileData = false;
   });
 
-  $('.team-member').on('click', function () {
-    $(this).find('.overlay').fadeToggle();
-  });
+  //team member overlay
+  if ($(window).width() <= 768) {
+    $('.team-member').on('click', function () {
+      $(this).find('.overlay').fadeToggle();
+    });
+  } else {
+    $('.team-member').hover(function () {
+      $(this).find('.overlay').fadeIn(300);
+    });
+    $('.team-member').mouseleave(function () {
+      $(this).find('.overlay').fadeOut(300);
+    });
+  }
 
   //----- Functions
 
