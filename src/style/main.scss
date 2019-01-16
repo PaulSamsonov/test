@@ -1194,8 +1194,9 @@
 
 .page {
   padding-top: 150px;
+  padding-bottom: 200px;
   .container {
-    width: 950px;
+    max-width: 950px;
   }
 
   h1 {
@@ -1217,6 +1218,11 @@
   .page-descr {
     text-align: center;
     margin-bottom: 76px;
+  }
+  a {
+    color: $white;
+    text-decoration: underline;
+    font-weight: 700;
   }
 }
 
