@@ -1190,4 +1190,34 @@
   display: none;
 }
 
+//page
+
+.page {
+  padding-top: 150px;
+  .container {
+    width: 950px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 45px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  p, h4 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+
+  h4 {
+    font-weight: 700;
+  }
+  .page-descr {
+    text-align: center;
+    margin-bottom: 76px;
+  }
+}
+
 @import "media";
