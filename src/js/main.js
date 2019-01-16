@@ -284,19 +284,22 @@ jQuery(document).ready(function ($) {
   function sendEmail (email) {
 
     var data = {
-      "personalizations": [
+      'personalizations': [
         {
-          "to": [
+          'to': [
             {
-              "email": email
+              'email': email
             }
           ]
         }
       ],
-      "from": {
-        "email": "invest@bitwala.com"
+      'from': {
+        'email': 'invest@bitwala.com'
       },
-      "template_id": "d-1adbe6ab40f94c4a84eaa436c3220084"
+      'template_id': 'd-1adbe6ab40f94c4a84eaa436c3220084',
+      'asm': {
+        'group_id': 7813
+      }
     };
     $.ajax({
       url: 'https://api.sendgrid.com/v3/mail/send',
