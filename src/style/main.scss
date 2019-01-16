@@ -768,6 +768,7 @@
     }
     .img-wrap {
       @include abs-align-x;
+      width: 100%;
       position: absolute;
       bottom: 0;
       height: 80px;
