@@ -299,6 +299,18 @@ jQuery(document).ready(function ($) {
       'template_id': 'd-1adbe6ab40f94c4a84eaa436c3220084',
       'asm': {
         'group_id': 7813
+      },
+      'tracking_settings': {
+        'click_tracking': {
+          'enable': true,
+          'enable_text': true
+        },
+        'open_tracking': {
+          'enable': true
+        },
+        'ganalytics': {
+          'enable': true
+        }
       }
     };
     $.ajax({
