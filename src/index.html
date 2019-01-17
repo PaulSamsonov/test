@@ -5,11 +5,19 @@
 	<title>Bitwala</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TRJXNR2');</script>
+	<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+      'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-TRJXNR2');</script>
 	<!-- End Google Tag Manager -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Lora:400,400i,700,700i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
 				rel="stylesheet">
@@ -19,6 +27,7 @@
 				rel="stylesheet"/>
 	<script
 				src='https://www.google.com/recaptcha/api.js?render=6LcO0ocUAAAAABj11_siC5P2rZSsxviho9yi0XMh'></script>
+	<!-- Cookieconsent -->
 	<link rel="stylesheet" type="text/css"
 				href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"/>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
@@ -32,19 +41,21 @@
           'button': {
             'background': '#5140ff'
           }
-        },
-        'theme': 'edgeless',
-        'position': 'bottom-right',
-        'type': 'opt-out'
+        }
       });
     });
 	</script>
+	<!-- End Cookieconsent -->
 </head>
 <body>
+
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRJXNR2"
-				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRJXNR2" height="0" width="0"
+					style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <!--register modal-->
 <div class="modal fade theme-modal register-modal" id="registerModal" tabindex="-1"
 		 role="dialog" aria-hidden="true">
@@ -102,8 +113,7 @@
 			</button>
 			<div class="inner-wrap">
 				<a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
-				<h3 class="modal-title">Please check your email, we will contact you shortly with more
-					information.</h3>
+				<h3 class="modal-title">Please check your email, we’ll contact you shortly.</h3>
 				<h3 class="modal-title">Your document is ready</h3>
 				<div class="btn-wrap">
 					<a href="#" class="primary-theme-btn btn show-thanks-modal">Download Whitepaper</a>
@@ -113,6 +123,7 @@
 	</div>
 </div>
 <!--download modal end-->
+
 <header id="mainHeader" class="header">
 	<div class="container">
 		<div class="inner-wrap">
@@ -120,8 +131,9 @@
 			<div class="main-navigation">
 				<div class="main-navigation-container">
 					<div class="inner-wrap">
-						<a href="#" class="bank-live-link"><span class="text">Bank live</span><span
-									class="icon"><img src="images/bank-live-icon.png" alt=""></span></a>
+						<a href="https://www.bitwala.com" class="bank-live-link" target="_blank"><span
+									class="text">We're live</span><span class="icon"><img
+									src="images/bank-live-icon.png" alt=""></span></a>
 						<ul class="main-nav">
 							<li><a href="#stoSection" class="main-nav-link">STO</a></li>
 							<li><a href="#roadmapSection" class="main-nav-link">Roadmap</a></li>
@@ -145,12 +157,13 @@
 <div class="main-content">
 	<section class="section section-home">
 		<div class="container">
-			<h1 class="main-title">The only account</h1>
+			<h1 class="main-title">The only bank</h1>
 			<h2 class="main-sub-title">Merging banking, crypto & tokenised assets</h2>
 			<div class="home-descr">
 				<p class="description">We’re growing Bitwala into a one-of-a-kind platform and you can be
 					part of it!</p>
-				<a href="#" class="arr-link">Get whitelisted &gt;</a>
+				<a href="#" class="arr-link show-whitelist-modal" data-toggle="modal"
+					 data-target="#whitelistModal">Get whitelisted &gt;</a>
 				<a href="#discoverSection" class="learn-more-link anchor"><span class="icon"><i
 							class="fa fa-angle-down"
 							aria-hidden="true"></i></span><span
@@ -170,14 +183,15 @@
 				<img class="section-img" src="images/mobile-screens.png" alt="">
 				<div class="container abs-container">
 					<div class="inner-wrap">
-						<h3 class="descr-title">Safe, fast, <br> transparent and live!</h3>
+						<h3 class="descr-title">Safe, fast, <br> transparent and live.</h3>
 						<div class="counter">
 							<div class="count">40,000</div>
-							<div class="descr">Early adopters and counting</div>
+							<div class="descr">users to be onboarded soon</div>
 						</div>
 						<div class="registration">
 							<h4 class="registration-title">Create your own Bitwala account today</h4>
-							<a href="#" class="arr-link registration-link">Sign up now &gt;</a>
+							<a href="https://www.bitwala.com/" class="arr-link registration-link" target="_blank">Sign
+								up now &gt;</a>
 						</div>
 					</div>
 				</div>
@@ -219,7 +233,7 @@
 				<div class="sub-block token-block">
 					<p class="sub-block-text">I want to reserve</p>
 					<div id="tokenButtonsLanding" class="token-buttons">
-						<div class="token-button less active" data-investor-type="public">€100k&lt;</div>
+						<div class="token-button less active" data-investor-type="public">&lt;€100k</div>
 						<div class="token-button more" data-investor-type="private">≥€100k</div>
 					</div>
 					<div class="sub-block-text text-right">worth of tokens</div>
@@ -343,7 +357,8 @@
 									<div class="doc-number">01</div>
 									<div class="doc-descr">
 										<h6 class="doc-title">One pager</h6>
-										<a href="#" class="arr-link document-download" data-doc-name="ONE PAGER">Download
+										<a href="https://drive.google.com/file/d/10OiyHz9Wk9ZIjgq_g06rj7qWJ1LnSYNE/view?usp=sharing"
+											 class="arr-link document-download" target="_blank" data-doc-name="ONE PAGER">Download
 											&gt;</a>
 									</div>
 								</div>
@@ -411,7 +426,9 @@
 						<div class="ts-item">
 							<img class="ts-icon" src="images/icon-pie-chart.png" alt="pie chart" width="75">
 							<h5 class="ts-item-title">10%</h5>
-							<div class="ts-item-descr">of all tokens generated for Team & <br> Ambassadors</div>
+							<div class="ts-item-descr">of all tokens generated for current and future Team &
+								Ambassadors
+							</div>
 						</div>
 					</div>
 				</div>
@@ -421,27 +438,27 @@
 							<div class="ts-item-title-wrap">
 								<h5 class="ts-item-title">Private sale</h5><span class="marker">ongoing</span>
 							</div>
-							<div class="ts-item-descr">Minimum tickets size 100k tokens.</div>
+							<div class="ts-item-descr">Minimum tickets size 100k EUR.</div>
 							<div class="ts-item-table">
 								<table class="table table-borderless">
 									<thead>
 									<tr>
 										<th scope="col">Bonus</th>
-										<th scope="col">Min Token Investment</th>
+										<th scope="col">Minimum Investment</th>
 									</tr>
 									</thead>
 									<tbody>
 									<tr>
 										<td>25%</td>
-										<td>2,500,000</td>
+										<td>€2,500,000</td>
 									</tr>
 									<tr>
 										<td>20%</td>
-										<td>1,000,000</td>
+										<td>€1,000,000</td>
 									</tr>
 									<tr>
 										<td>15%</td>
-										<td>100,000</td>
+										<td>€100,000</td>
 									</tr>
 									</tbody>
 								</table>
@@ -453,13 +470,13 @@
 							<div class="ts-item-title-wrap">
 								<h5 class="ts-item-title">Public sale Q2 2019</h5>
 							</div>
-							<div class="ts-item-descr">Minimum investment 500 tokens.</div>
+							<div class="ts-item-descr">Minimum investment 500 EUR.</div>
 							<div class="ts-item-table">
 								<table class="table table-borderless">
 									<thead>
 									<tr>
 										<th scope="col">Bonus</th>
-										<th scope="col">Amt of Public Sale</th>
+										<th scope="col">Public Sale max amount</th>
 									</tr>
 									</thead>
 									<tbody>
@@ -661,11 +678,9 @@
 							<div class="overlay" style="display: none">
 								<h6 class="member-name">Christoph Iwaniez</h6>
 								<div class="position">CFO</div>
-								<div class="descr">Christoph has joined Bitwala in July 2018 and is responsible for
-									budgeting, AML regulations, trading, and compliance. He has 10 + years of
-									experience in the traditional banking industry (LBBW) and M&A business. Christoph
-									also has experience as the CFO of a corporate start-up which connects German
-									Sparkassen Group to paydirekt payment scheme.
+								<div class="descr">Christoph was previously the CFO of GIZS which connects the
+									German Sparkassen Group to the Paydirekt payment scheme and before that 10 years
+									at Landesbank Baden-Württemberg (LBBW), one of Germanys biggest banking groups.
 								</div>
 								<a target="_blank" href="https://www.linkedin.com/in/christoph-iwaniez-a93a558b"
 									 class="social-icon"><i class="fa fa-linkedin"
@@ -679,13 +694,10 @@
 							<div class="overlay" style="display: none">
 								<h6 class="member-name">Benjamin Jones</h6>
 								<div class="position">CTO</div>
-								<div class="descr">Ben graduated from the London School of Economics after obtaining
-									a B.Sc in philosophy and economics. Frustrated by the tautologous nature of
-									macroeconomic models in the wake of the financial crisis, Ben dived head first
-									into the Berlin startup scene. After mentoring startups in Ghana, he saw the
-									potential impact of bitcoin on the developing world and became hooked on crypto.
-									An avid believer and contributor to open source, Ben joined Jan and Jörg soon
-									after the consulting firm’s inception and quickly fell into the role of CTO.
+								<div class="descr">Ben is a self-taught programer with over 5 years of experience in
+									blockchain and cryptocurrencies. A London School of Economics graduate, Ben
+									previously taught programming in Ghana, founded a web agency for early-stage
+									startups, and was an economist in the UK civil service.
 								</div>
 								<a target="_blank" href="https://www.linkedin.com/in/benjamin-jones-b635874b"
 									 class="social-icon"><i
@@ -700,14 +712,11 @@
 							<div class="overlay" style="display: none">
 								<h6 class="member-name">Konstantin Werhahn</h6>
 								<div class="position">CPO</div>
-								<div class="descr">Konstantin is responsible for the roadmap and brings a lot of
-									banking and FinTech experience to the leadership team. In his previous position,
-									he oversaw the product development of FinTech Group AG and helped to restructure
-									the 450 employees large group into a white-label platform banking provider. Before
-									the FinTech Group AG, he was the Head of Product at the FinTech Startup
-									Barzahlen.de and helped it to become an established payment provider. Konstantin
-									contributes with banking and financial infrastructure know-how as well as the
-									experience of building multiple successful FinTech companies.
+								<div class="descr">Konstantin has over 9 years of extensive experience in Banking,
+									FinTech and Startups. Prior to Bitwala, he oversaw the product development at
+									FinTech Group AG and helped to restructure the 450 employee large group into a
+									white-label platform banking provider. He was also the Head of Product at the
+									FinTech startup Barzahlen.de.
 								</div>
 								<a target="_blank" href="https://www.linkedin.com/in/konstantinwerhahn"
 									 class="social-icon"><i class="fa fa-linkedin"
@@ -721,11 +730,10 @@
 							<div class="overlay" style="display: none">
 								<h6 class="member-name">Jan Goslicki</h6>
 								<div class="position">CCO</div>
-								<div class="descr">Ex PwC, Jan has a strong attention to detail and quality
-									assurance. Jan oversees all aspects of finances, compliance and customer
-									relations. In July 2017 Jan had an accident that left him paralyzed. With his
-									strong mind and spirit, he is still actively contributing to the team and a
-									founding member and he will return to his desk within 2019.
+								<div class="descr">Jan studied economics and has over 5 years of crypto and
+									blockchain experience under his belt. Before founding Bitwala with Jörg and Ben,
+									he worked at PwC. Jan handles compliance, customer success and finances together
+									with our CFO.
 								</div>
 								<a target="_blank" href="https://www.linkedin.com/in/jangoslicki"
 									 class="social-icon"><i
@@ -740,11 +748,10 @@
 							<div class="overlay" style="display: none">
 								<h6 class="member-name">Jörg von Minckwitz</h6>
 								<div class="position">Chief strategist</div>
-								<div class="descr">Jörg has been actively involved in Bitcoin since the beginning of
-									2011 and has a long legacy of founding Bitcoin and crypto-based businesses. He is
-									the co-founder of Bitsandcoins Consulting UG, the first Bitcoin Consulting in
-									Europe, as well as E4BTC, the first e-commerce shop in Europe focused on Bitcoin.
-									He also co-founded Bitcoins Berlin, the first Bitcoin startup incubator in Europe.
+								<div class="descr">Jörg previously founded Europe’s first crypto consulting, crypto
+									incubator and first cryptocurrency e-commerce shop. His work has been awarded by
+									the Paris Fintech Forum, ICT Spring, Pioneers Festival and The German Innovations
+									Prize.
 								</div>
 								<a target="_blank" href="https://www.linkedin.com/in/joergvonminckwitz"
 									 class="social-icon"><i
@@ -756,9 +763,9 @@
 				</div>
 			</div>
 			<div class="invitation">
-				Bitwala is growing! Meet the <a target="_blank"
+				Bitwala is growing. Meet the <a target="_blank"
 																				href="https://www.linkedin.com/search/results/people/?facetCurrentCompany=%5B%2227009872%22%5D">whole
-				team</a> or <a target="_blank" href="https://www.bitwala.com/careers">join us</a>!
+				team</a> or <a target="_blank" href="https://www.bitwala.com/careers">join us</a>.
 			</div>
 		</div>
 	</section>
@@ -810,14 +817,14 @@
 							<img class="hov-img" src="images/logo-htgf-hover.png" alt="htgf" width="250">
 						</a>
 					</div>
-					<div class="col-md-4 col-6 partner-item">
+					<!-- <div class="col-md-4 col-6 partner-item">
 						<a href="https://www.solarisbank.com/en/" class="partner-link">
 							<img class="def-img" src="images/logo-solaris-bank-grey.png"
 									 alt="solaris" width="225px">
 							<img class="hov-img" src="images/logo-solaris-bank-hover.png"
 									 alt="solaris" width="225px">
 						</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -831,17 +838,14 @@
 			<div class="row media-texts">
 				<div class="col col-12 col-lg-4 col-md-6 text-center">
 					<p>“This recent development will mark another milestone achievement for blockchain
-						industry
-						as a whole
-						in terms of achieving mainstream recognition and adoption.”</p>
+						industry as a whole in terms of achieving mainstream recognition and adoption.”</p>
 					<div class="img-wrap"><a target="_blank"
 																	 href="https://www.ccn.com/this-german-fintech-startup-will-let-you-hold-bitcoin-in-your-bank-account"
 					><img src="images/logo-ccn.png" alt="ccn" height="55"></a></div>
 				</div>
 				<div class="col col-12 col-lg-4 col-md-6 text-center">
-					<p>“Users can pay for a restaurant meal with their card, and the bank will automatically
-						convert their
-						bitcoin into currency.”</p>
+					<p>“While cryptocurrency exchanges can be confusing and daunting to most people, 'nothing
+						is more easy to explain than a normal bank account'”</p>
 					<div class="img-wrap">
 						<a target="_blank"
 							 href="https://www.cnbc.com/2018/03/02/spending-cryptocurrencies-on-everyday-purchases-is-getting-easier.html"
@@ -877,9 +881,7 @@
 				</div>
 				<div class="col col-12 col-lg-4 col-md-6 text-center">
 					<p> “The Bitwala account comes with a bitcoin wallet. Users can manage both their BTC and
-						euro
-						deposits
-						in one place”</p>
+						EUR deposits in one place.”</p>
 					<div class="img-wrap"><a target="_blank"
 																	 href="https://news.bitcoin.com/bitwala-bank-bitcoin-wallet-debit-card"
 					><img src="images/logo-bitcoin-com.png" alt="bitcoin" height="50"></a>
@@ -898,63 +900,123 @@
 				<div class="col-12 col-md-6 col-lg-4 event-col">
 					<div class="event">
 						<div class="event-date">
-							<div class="event-day">5-6</div>
-							<div class="event-month">Dec</div>
+							<div class="event-day">16</div>
+							<div class="event-month">Jan</div>
 						</div>
 						<div class="event-descr">
-							<div class="event-place">London GB</div>
-							<h5 class="event-name">FinTech Connect</h5>
+							<div class="event-place">St Moritz CH</div>
+							<h5 class="event-name">Crypto Finance Conference</h5>
 						</div>
 					</div>
 				</div>
 				<div class="col-12 col-md-6 col-lg-4 event-col">
 					<div class="event">
 						<div class="event-date">
-							<div class="event-day">4-5</div>
-							<div class="event-month">Dec</div>
+							<div class="event-day">17</div>
+							<div class="event-month">Feb</div>
 						</div>
 						<div class="event-descr">
-							<div class="event-place">Helsinki FI</div>
-							<h5 class="event-name">Slush</h5>
+							<div class="event-place">Istanbul TR</div>
+							<h5 class="event-name">World Congress of Angel Investors</h5>
 						</div>
 					</div>
 				</div>
 				<div class="col-12 col-md-6 col-lg-4 event-col">
 					<div class="event">
 						<div class="event-date">
-							<div class="event-day">29-30</div>
-							<div class="event-month">Nov</div>
+							<div class="event-day">20</div>
+							<div class="event-month">Feb</div>
 						</div>
 						<div class="event-descr">
-							<div class="event-place">BERLIN DE</div>
-							<h5 class="event-name">Techcrunch Disrupt Berlin</h5>
+							<div class="event-place">Istanbul TR</div>
+							<h5 class="event-name">Blockchain Economy Summit</h5>
 						</div>
 					</div>
 				</div>
 				<div class="col-12 col-md-6 col-lg-4 event-col">
 					<div class="event">
 						<div class="event-date">
-							<div class="event-day">23-24</div>
-							<div class="event-month">Nov</div>
+							<div class="event-day">22</div>
+							<div class="event-month">Mar</div>
 						</div>
 						<div class="event-descr">
-							<div class="event-place">Basel CH</div>
-							<h5 class="event-name">Blockchain Leadership Summit</h5>
+							<div class="event-place">Kyiv UA</div>
+							<h5 class="event-name">Blockchain UA</h5>
 						</div>
 					</div>
 				</div>
 				<div class="col-12 col-md-6 col-lg-4 event-col">
 					<div class="event">
 						<div class="event-date">
-							<div class="event-day">4-7</div>
-							<div class="event-month">Nov</div>
+							<div class="event-day">13</div>
+							<div class="event-month">May</div>
 						</div>
 						<div class="event-descr">
-							<div class="event-place">Lisbon PT</div>
-							<h5 class="event-name">Web Summit</h5>
+							<div class="event-place">Sofia BG</div>
+							<h5 class="event-name">Webit.Festival</h5>
 						</div>
 					</div>
 				</div>
+				<!-- 				<div class="col-12 col-md-6 col-lg-4 event-col">
+									<div class="event">
+										<div class="event-date">
+											<div class="event-day">5-6</div>
+											<div class="event-month">Dec</div>
+										</div>
+										<div class="event-descr">
+											<div class="event-place">London GB</div>
+											<h5 class="event-name">FinTech Connect</h5>
+										</div>
+									</div>
+								</div> -->
+				<!-- 				<div class="col-12 col-md-6 col-lg-4 event-col">
+									<div class="event">
+										<div class="event-date">
+											<div class="event-day">4-5</div>
+											<div class="event-month">Dec</div>
+										</div>
+										<div class="event-descr">
+											<div class="event-place">Helsinki FI</div>
+											<h5 class="event-name">Slush</h5>
+										</div>
+									</div>
+								</div> -->
+				<!-- 				<div class="col-12 col-md-6 col-lg-4 event-col">
+									<div class="event">
+										<div class="event-date">
+											<div class="event-day">29-30</div>
+											<div class="event-month">Nov</div>
+										</div>
+										<div class="event-descr">
+											<div class="event-place">BERLIN DE</div>
+											<h5 class="event-name">Techcrunch Disrupt Berlin</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-4 event-col">
+									<div class="event">
+										<div class="event-date">
+											<div class="event-day">23-24</div>
+											<div class="event-month">Nov</div>
+										</div>
+										<div class="event-descr">
+											<div class="event-place">Basel CH</div>
+											<h5 class="event-name">Blockchain Leadership Summit</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-4 event-col">
+									<div class="event">
+										<div class="event-date">
+											<div class="event-day">4-7</div>
+											<div class="event-month">Nov</div>
+										</div>
+										<div class="event-descr">
+											<div class="event-place">Lisbon PT</div>
+											<h5 class="event-name">Web Summit</h5>
+										</div>
+									</div>
+								</div> -->
 			</div>
 		</div>
 	</section>
@@ -1040,7 +1102,7 @@
 							a blockchain (WEF 2015). With our banking platform, we have successfully built the
 							gateway between traditional and digital currencies. We are now launching a Security
 							Token Offering to grow Bitwala into a universal platform that merges banking,
-							cryptocurrencies, and access to tokenised assets, as one.
+							cryptocurrencies and tokenised assets, as one.
 						</div>
 					</div>
 				</div>
@@ -1059,10 +1121,10 @@
 						<div class="card-body">
 							In the tokenisation space we are leading by example: our tokens are directly linked to
 							our market value and guarantee preferential participation rights in our dividends and
-							exit proceeds, similar to Zero-Coupon Convertibles, with the added benefits of
-							liquidity and tradability. Bitwala’s STO will be approved by the German Federal
-							Financial Supervisory Authority (BaFin) and will include an investment prospectus. For
-							more detailed information please download of official documentation.
+							exit proceeds, with the added benefits of liquidity and tradability. Bitwala’s STO
+							will be approved by the German Federal Financial Supervisory Authority (BaFin) and
+							will include an investment prospectus. For more detailed information please wait for
+							our final official documentation.
 						</div>
 					</div>
 				</div>
@@ -1080,9 +1142,8 @@
 							 data-parent="#accordionFaq">
 						<div class="card-body">
 							BitwalaToken Offering is currently ongoing private sale. Private sale is dedicated to
-							all eligible investor with a minimum participation of 100,000 tokens. We plan to
-							launch an open sale by Q2 2019. The minimum investment threshold is planned at 500
-							tokens.
+							all eligible investor with a minimum investment of of €100,000. We plan to launch an
+							open sale by Q2 2019. The minimum investment threshold is planned at 500 EUR.
 						</div>
 					</div>
 				</div>
@@ -1097,12 +1158,12 @@
 						data-aos-delay="100"
 						data-aos-duration="1500">Don’t miss your chance</h2>
 				<div class="subscribe-descr" data-aos-duration="1500" data-aos="fade-right"
-						 data-aos-delay="200">Join our list and we will keep you updated <br> about all phases
-					of our Token Offering!
+						 data-aos-delay="200">
+					Join our list and we will keep you updated
+					<br> about all phases of our Token Offering!
 				</div>
 				<a href="#" class="btn dark-theme-btn" data-toggle="modal" data-target="#whitelistModal"
-					 data-aos-duration="1500" data-aos="fade-up" data-aos-delay="100">Get
-					whitelisted</a>
+					 data-aos-duration="1500" data-aos="fade-up" data-aos-delay="100">Get whitelisted</a>
 			</div>
 		</div>
 	</section>
@@ -1203,7 +1264,7 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 				<a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
-				<h3 id="modal-title" class="modal-title">Reserve your spot for the Bitwala STO!</h3>
+				<h3 id="modal-title" class="modal-title">Reserve your spot for the Bitwala STO</h3>
 			</div>
 			<div class="modal-body">
 				<h4 id="modal-sub-title" class="modal-sub-title">The reservation is non-binding, we will
@@ -1213,12 +1274,12 @@
 					<div class="token-block">
 						<p class="sub-block-text">I want to reserve</p>
 						<div class="token-buttons" id="tokenButtons">
-							<div class="token-button active less" data-investor-type="public">€100k&lt;</div>
+							<div class="token-button active less" data-investor-type="public">&lt;€100k</div>
 							<div class="token-button more" data-investor-type="private">≥€100k</div>
 						</div>
 						<div class="sub-block-text text-right">worth of tokens</div>
 						<h4 class="modal-sub-title">The private sale is reserved for minimum investments of
-							€100k in token value.</h4>
+							€100k.</h4>
 					</div>
 					<div class="form-group">
 						<div class="row">
@@ -1267,7 +1328,7 @@
 							<option value="cambodian">Cambodian</option>
 							<option value="cameroonian">Cameroonian</option>
 							<option value="canadian">Canadian</option>
-							<option value="cape verdean">Cape Verdean</option>
+							<option value="cape_verdean">Cape Verdean</option>
 							<option value="central_african">Central African</option>
 							<option value="chadian">Chadian</option>
 							<option value="chilean">Chilean</option>
@@ -1288,7 +1349,7 @@
 							<option value="ecuadorean">Ecuadorean</option>
 							<option value="egyptian">Egyptian</option>
 							<option value="emirian">Emirian</option>
-							<option value="equatorial guinean">Equatorial Guinean</option>
+							<option value="equatorial_guinean">Equatorial Guinean</option>
 							<option value="eritrean">Eritrean</option>
 							<option value="estonian">Estonian</option>
 							<option value="ethiopian">Ethiopian</option>
@@ -1326,7 +1387,7 @@
 							<option value="jordanian">Jordanian</option>
 							<option value="kazakhstani">Kazakhstani</option>
 							<option value="kenyan">Kenyan</option>
-							<option value="kittian and nevisian">Kittian and Nevisian</option>
+							<option value="kittian_and_nevisian">Kittian and Nevisian</option>
 							<option value="kuwaiti">Kuwaiti</option>
 							<option value="kyrgyz">Kyrgyz</option>
 							<option value="laotian">Laotian</option>
@@ -1380,7 +1441,7 @@
 							<option value="romanian">Romanian</option>
 							<option value="russian">Russian</option>
 							<option value="rwandan">Rwandan</option>
-							<option value="saint lucian">Saint Lucian</option>
+							<option value="saint_lucian">Saint Lucian</option>
 							<option value="salvadoran">Salvadoran</option>
 							<option value="samoan">Samoan</option>
 							<option value="san_marinese">San Marinese</option>
@@ -1396,8 +1457,8 @@
 							<option value="slovenian">Slovenian</option>
 							<option value="solomon_islander">Solomon Islander</option>
 							<option value="somali">Somali</option>
-							<option value="south african">South African</option>
-							<option value="south korean">South Korean</option>
+							<option value="south_african">South African</option>
+							<option value="south_korean">South Korean</option>
 							<option value="spanish">Spanish</option>
 							<option value="sri_lankan">Sri Lankan</option>
 							<option value="sudanese">Sudanese</option>
@@ -1463,19 +1524,19 @@
 				<a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
 			</div>
 			<div class="modal-body">
-				<h3 id="modal-title-send" class="modal-title">Please check your email, we will contact you
-					shortly with
-					more information!</h3>
+				<h3 id="modal-title-send" class="modal-title">Please check your email, we’ll contact you
+					shortly! In the meantime, you can...</h3>
 				<div class="row">
 					<div class="col">
 						<p class="inner-title">Join our community!</p>
-						<a class="telegram-button modal-secondary-btn" href="#"><i class="fa fa-paper-plane-o"
-																																			 aria-hidden="true"></i></i>
-							1.254</a>
+						<a class="telegram-button modal-secondary-btn" href="https://t.me/BitwalaTGE"><i
+									class="fa fa-paper-plane-o"
+									aria-hidden="true"></i></i>
+							Telegram</a>
 					</div>
 					<div class="col">
 						<p class="inner-title">Get your free banking account!</p>
-						<a class="bitwala-button modal-secondary-btn" href="#"><img
+						<a class="bitwala-button modal-secondary-btn" href="https://www.bitwala.com"><img
 									src="images/bitwala-logo-blue.png"
 									alt="bitwala"></a>
 					</div>
