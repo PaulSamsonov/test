@@ -18,7 +18,7 @@ var path = {
         html: 'public/',
         js: 'public/js/',
         css: 'public/css/',
-        img: 'public/images/',
+        img: './public/images',
         fonts: 'public/fonts/',
         data: 'public/data'
     },
@@ -26,7 +26,7 @@ var path = {
         html: ['src/*.html', 'src/favicon.*'],
         js: 'src/js/*.*',
         style: 'src/style/main.scss',
-        img: 'src/img/**/*.*',
+        img: './src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
         data: 'src/data/**/*.*',
         libFonts: [
@@ -52,7 +52,7 @@ var path = {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
-        img: 'src/img/**/*.*',
+        img: './src/img/**/*.*',
         fonts: 'src/font/**/*.*',
         data: 'src/data/**/*.*'
     },
@@ -106,7 +106,12 @@ gulp.task('style', function () {
 gulp.task('image', function () {
     gulp.src(path.src.img)
         .pipe(gulp.dest(path.build.img))
-        .pipe(reload({stream: true}));
+});
+
+gulp.task('images', function () {
+  gulp.src(path.src.img)
+    .pipe(gulp.dest(path.build.img))
+    .pipe(reload({stream: true}));
 });
 
 gulp.task('fonts', function () {
@@ -150,8 +155,7 @@ gulp.task('build', [
     'style',
     'fonts',
     'data',
-    'lib',
-    'image'
+    'lib'
 ]);
 
 gulp.task('watch', function () {
@@ -165,7 +169,7 @@ gulp.task('watch', function () {
         gulp.start('js');
     });
     watch([path.watch.img], function () {
-        gulp.start('image');
+        gulp.start('images');
     });
     watch([path.watch.fonts], function () {
         gulp.start('fonts');
@@ -183,4 +187,4 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('default', ['build', 'watch', 'webserver']);
+gulp.task('default', ['build', 'watch', 'webserver', 'image']);
