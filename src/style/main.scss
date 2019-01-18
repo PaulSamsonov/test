@@ -76,8 +76,10 @@
 
 .section-home {
   margin-bottom: $section-mid-space;
-  background: url("../images/home-bg.png") no-repeat bottom right;
   padding-top: 20px;
+  .container {
+    background: url("../images/home-bg.png") no-repeat bottom right;
+  }
   .main-sub-title {
     margin-bottom: 6%;
   }

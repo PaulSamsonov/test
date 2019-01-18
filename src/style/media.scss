@@ -16,7 +16,9 @@
     }
   }
   .section-home {
-    background-size: contain;
+    .container{
+      background-size: contain;
+    }
   }
   .discover-section {
     .descr-title {
@@ -486,8 +488,10 @@
   .section-home {
     padding-bottom: 0;
     margin-bottom: 140px;
-    background-size: 350px;
-    background-position: 114% 53%;
+    .container {
+      background-size: 350px;
+      background-position: 114% 53%;
+    }
     .home-descr {
       max-width: 100%;
       .description {
