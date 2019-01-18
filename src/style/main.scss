@@ -75,7 +75,7 @@
 //home
 
 .section-home {
-  margin-bottom: $section-mid-space;
+  margin-bottom: 200px;
   padding-top: 20px;
   .container {
     background: url("../images/home-bg.png") no-repeat bottom right;
@@ -100,6 +100,7 @@
 //discover section
 
 .discover-section {
+  padding-top: 70px;
   margin-bottom: $section-sub-bottom;
   .section-title {
     margin-bottom: 50px;
