@@ -1095,6 +1095,51 @@
   }
 }
 
+.sendgrid-subscription-widget {
+  #sg_signup_first_name,
+  #sg_signup_last_name,
+  #sg_email {
+    @extend .inp;
+  }
+  #sg-submit-btn {
+    @extend .btn;
+    color: $black !important;
+    background-color: $aqua !important;
+    border: 2px solid aqua !important;
+    transition: all 0.3s;
+    margin: 30px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    &:hover {
+      background-color: $transp !important;
+      border-color: $aqua !important;
+      color: $aqua !important;
+    }
+  }
+  .sg-consent-text {
+    display: flex;
+    align-items: center;
+  }
+  .sg-consent-text {
+    justify-content: center;
+    margin-bottom: 40px;
+    label {
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+    }
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    a {
+      color: #fff !important;
+      text-decoration: underline;
+      font-style: italic;
+      padding-left: 4px;
+    }
+  }
+}
+
 .whitelist-send {
   .modal-title {
     margin-bottom: 40px;

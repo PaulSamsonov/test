@@ -867,6 +867,11 @@
       margin-bottom: 20px;
     }
   }
+  .sendgrid-subscription-widget {
+    .sg-consent-text {
+      font-size: 11px !important;
+    }
+  }
 }
 
 @media (max-width: 360px) {
