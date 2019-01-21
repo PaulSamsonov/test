@@ -1096,10 +1096,21 @@
 }
 
 .sendgrid-subscription-widget {
-  #sg_signup_first_name,
-  #sg_signup_last_name,
-  #sg_email {
+  input[type=text],
+  input[type=email] {
     @extend .inp;
+    @include placeholder {
+      color: $white !important;
+    }
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  #sg_signup_first_name {
+    width: calc((100% - 30px) /2);
+    margin-right: 30px !important;
+  }
+  #sg_signup_last_name {
+    width: calc((100% - 30px) /2);
   }
   #sg-submit-btn {
     @extend .btn;

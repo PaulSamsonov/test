@@ -37,7 +37,8 @@ var path = {
             'node_modules/font-awesome/css/font-awesome.min.css',
             'node_modules/swiper/dist/css/swiper.min.css',
             'node_modules/bootstrap/dist/css/bootstrap.min.css',
-            'node_modules/aos/dist/aos.css'
+            'node_modules/aos/dist/aos.css',
+            'node_modules/select2/dist/css/select2.min.css'
         ],
         libJs: [
             'node_modules/jquery/dist/jquery.min.js',
@@ -45,7 +46,8 @@ var path = {
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/lottie-web/build/player/lottie.min.js',
             'node_modules/bodymovin/build/player/bodymovin.min.js',
-            'node_modules/aos/dist/aos.js'
+            'node_modules/aos/dist/aos.js',
+            'node_modules/select2/dist/js/select2.min.js'
         ]
     },
     watch: {
