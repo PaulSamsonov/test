@@ -2,6 +2,9 @@
   "name": "bitwala",
   "private": true,
   "version": "1.0.0",
+  "scripts": {
+    "build": "gulp"
+  },
   "dependencies": {
     "aos": "^2.3.4",
     "body-parser": "^1.18.3",
