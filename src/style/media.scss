@@ -16,7 +16,9 @@
     }
   }
   .section-home {
-    background-size: contain;
+    .container{
+      background-size: contain;
+    }
   }
   .discover-section {
     .descr-title {
@@ -184,6 +186,7 @@
     }
   }
   .discover-section {
+    padding-top: 0;
     .descr-title {
       font-size: 28px;
       margin-bottom: 25px;
@@ -486,8 +489,10 @@
   .section-home {
     padding-bottom: 0;
     margin-bottom: 140px;
-    background-size: 350px;
-    background-position: 114% 53%;
+    .container {
+      background-size: 350px;
+      background-position: 114% 53%;
+    }
     .home-descr {
       max-width: 100%;
       .description {
@@ -865,11 +870,6 @@
     .subscribe-descr {
       font-size: 16px;
       margin-bottom: 20px;
-    }
-  }
-  .sendgrid-subscription-widget {
-    .sg-consent-text {
-      font-size: 11px !important;
     }
   }
 }
