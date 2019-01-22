@@ -1345,4 +1345,19 @@
   }
 }
 
+.sg-consent-text-wrap {
+  .sg-consent-text {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  .sg-consent-text{
+    label {
+      align-items: flex-start;
+    }
+    input[type=checkbox] {
+      margin-top: 6px;
+    }
+  }
+}
+
 @import "media";

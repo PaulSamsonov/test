@@ -908,6 +908,13 @@
       padding: 5px 12px;
     }
   }
+  .sg-consent-text-wrap {
+    .sg-consent-text{
+      input[type=checkbox] {
+        margin-top: 2px;
+      }
+    }
+  }
 }
 
 @media (max-width: 360px) {
