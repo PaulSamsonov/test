@@ -211,7 +211,7 @@
     }
   }
   .carousel-control {
-    @include abs-align-y;
+    top: 130px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -219,6 +219,7 @@
     opacity: 1;
     font-size: 40px;
     cursor: pointer;
+    z-index: 100;
 
     &-prev {
       left: -30px;
