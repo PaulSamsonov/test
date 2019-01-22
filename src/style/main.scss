@@ -1109,6 +1109,13 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+
+  #sg-widget{
+    div.sg-response.success{
+      display: none!important;
+    }
+  }
+
   #sg_signup_first_name {
     width: calc((100% - 30px) /2);
     margin-right: 30px !important;
