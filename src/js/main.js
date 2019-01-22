@@ -16,66 +16,6 @@ jQuery(document).ready(function ($) {
     event.preventDefault();
   });
 
-  // Add contact to global list and other lists
-  $('#getWhitelisted').on('click', function (e) {
-    e.preventDefault();
-    email = $('#email');
-    firstName = $('#firstName');
-    lastName = $('#lastName');
-    nationality = $('#nationality');
-    tokenButtons = $('#tokenButtons .active').data('investor-type');
-    toNewsletter = $('#addToNews').prop('checked');
-    termsAndConditions = $('#termsAndCond');
-
-    var error = false;
-
-    if (!email.val().length) {
-      error = true;
-      email.addClass('error');
-    } else {
-      email.removeClass('error');
-    }
-
-    if (!firstName.val().length) {
-      error = true;
-      firstName.addClass('error');
-    } else {
-      firstName.removeClass('error');
-    }
-
-    if (!lastName.val().length) {
-      error = true;
-      lastName.addClass('error');
-    } else {
-      lastName.removeClass('error');
-    }
-
-    if (!nationality.val().length) {
-      error = true;
-      $('.select2').addClass('error');
-      $('#select2-nationality-container').css('cssText','color: darkred !important');
-    } else {
-      nationality.removeClass('error');
-      $('.select2-selection__rendered').removeAttr('style');
-      $('.select2').removeClass('error');
-
-    }
-
-    if (!termsAndConditions.prop('checked')) {
-      error = true;
-      termsAndConditions.addClass('error');
-      $('label[for="termsAndCond"]').addClass('error-radio');
-    } else {
-      termsAndConditions.removeClass('error-radio');
-      $('label[for="termsAndCond"]').removeClass('error-radio');
-
-    }
-
-    if (!error) {
-      addToAllContacts();
-    }
-
-  });
 
   //mobile navigation
   $('.menu-toggle').on('click', function () {
@@ -208,6 +148,22 @@ jQuery(document).ready(function ($) {
   // Show thank you modal after registration
   $('.show-whitelist-modal').on('click', function () {
     fileData = false;
+  });
+
+  var timer = setInterval(function () {
+    if ($('#sg-response').hasClass('success')) {
+      $('#whitelistModal').modal('hide');
+      setTimeout(function () {$('#whitelistModalSend').modal('show');}, 500);
+      clearInterval(timer);
+    }
+  }, 1000);
+
+  $('#addToNews').on('click', function () {
+    if ($(this).is(':checked')) {
+      $('#sg_custom_2').val('yes');
+    } else {
+      $('#sg_custom_2').val('no');
+    }
   });
 
   //team member overlay
