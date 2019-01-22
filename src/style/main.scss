@@ -1110,11 +1110,11 @@
     margin-right: 0 !important;
   }
   #sg_signup_first_name {
-    width: calc((100% - 30px) /2);
+    width: calc((100% - 30px) / 2);
     margin-right: 30px !important;
   }
   #sg_signup_last_name {
-    width: calc((100% - 30px) /2);
+    width: calc((100% - 30px) / 2);
   }
   #sg-submit-btn {
     @extend .btn;
@@ -1161,30 +1161,6 @@
   }
   .modal-body {
     padding-bottom: 70px;
-    .modal-secondary-btn {
-      text-align: center;
-      padding: 5px 15px;
-      border-radius: 15px;
-      background-color: $aqua;
-      font-size: 12px;
-      letter-spacing: 0.2px;
-      font-weight: 900;
-      line-height: 1.58;
-      color: $blue;
-      display: inline-flex;
-      align-items: center;
-    }
-    .telegram-button {
-      i {
-        font-size: 18px;
-        margin-right: 5px;
-      }
-    }
-    .bitwala-button {
-      height: 27px;
-      width: 90px;
-      padding: 10px;
-    }
     .col {
       text-align: center;
     }
@@ -1194,6 +1170,33 @@
       color: $white;
     }
   }
+}
+
+.modal-secondary-btn {
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 15px;
+  background-color: $aqua;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  font-weight: 900;
+  line-height: 1.58;
+  color: $blue;
+  display: inline-flex;
+  align-items: center;
+}
+
+.telegram-button {
+  i {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}
+
+.bitwala-button {
+  height: 27px;
+  width: 90px;
+  padding: 10px;
 }
 
 .check-modal, .download-modal {
@@ -1283,6 +1286,55 @@
     color: $white;
     text-decoration: underline;
     font-weight: 700;
+  }
+}
+
+//thank you page
+
+.ty-page {
+  height: 100vh;
+  overflow: hidden;
+  .ty-body {
+    padding-top: 80px;
+  }
+  .ty-image {
+    img {
+      width: 100%;
+    }
+  }
+  .ty-inner-wrap {
+    width: 940px;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+  }
+  .ty-title {
+    font-family: $montserrat;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: 0.3px;
+  }
+  .ty-descr {
+    font-size: 24px;
+    line-height: 1.42;
+    letter-spacing: 0.3px;
+    margin-bottom: 58px;
+  }
+  .inner-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .modal-secondary-btn {
+    width: 135px;
+    height: 45px;
+    font-size: 16px;
+    text-decoration: none;
+    color: $blue;
+    letter-spacing: 0.3px;
+    font-weight: 900;
+    padding: 10px 20px;
+    border-radius: 30px;
   }
 }
 
