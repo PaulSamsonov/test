@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
   //----- Variable
   var failList = ['algerian', 'bahamian', 'bangladeshi', 'bolivian', 'batswana', 'ethiopian', 'chinese', 'cuban', 'ecuadorean', 'ghanaian', 'iranian', 'jordanian', 'macedonian', 'moroccan', 'nepalese', 'north_korean', 'pakistani', 'serbian', 'sri_lankan', 'syrian', 'sudanese', 'trinidadian_or_tobagonian', 'tunisian', 'american', 'venezuelan', 'yemeni'
-    ], email, firstName, lastName, nationality, tokenButtons, toNewsletter, termsAndConditions,
+    ], email, firstName, lastName, nationality, tokenButtons, toNewsletter,
     recaptcha = false,
     fileData = false,
     APIKEY = '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';
@@ -152,8 +152,13 @@ jQuery(document).ready(function ($) {
 
   var timer = setInterval(function () {
     if ($('#sg-response').hasClass('success')) {
-      $('#whitelistModal').modal('hide');
-      setTimeout(function () {$('#whitelistModalSend').modal('show');}, 500);
+      if (fileData) {
+        $('#whitelistModal').modal('hide');
+        setTimeout(function () {$('#checkModal').find('.btn').attr('href', fileData.link).text('Download ' + capitalizeFirstLetter(fileData.name)).end().modal('show');}, 500);
+      } else {
+        $('#whitelistModal').modal('hide');
+        setTimeout(function () {$('#whitelistModalSend').modal('show');}, 500);
+      }
       clearInterval(timer);
     }
   }, 1000);
