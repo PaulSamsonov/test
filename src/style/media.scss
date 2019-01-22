@@ -16,7 +16,7 @@
     }
   }
   .section-home {
-    .container{
+    .container {
       background-size: contain;
     }
   }
@@ -310,6 +310,14 @@
   .subscribe-section {
     .subscribe-title {
       font-size: 36px;
+    }
+  }
+  .ty-page {
+    .ty-title {
+      font-size: 36px;
+    }
+    .ty-descr {
+      font-size: 18px;
     }
   }
 }
@@ -874,6 +882,37 @@
     .subscribe-descr {
       font-size: 16px;
       margin-bottom: 20px;
+    }
+  }
+  .page {
+    padding-top: 60px;
+  }
+  .ty-page {
+    .ty-title {
+      font-size: 20px;
+    }
+    .ty-descr {
+      font-size: 14px;
+      br {
+        display: none;
+      }
+    }
+    .inner-title {
+      font-size: 12px;
+      min-height: 36px;
+    }
+    .modal-secondary-btn {
+      width: 100px;
+      height: 28px;
+      font-size: 12px;
+      padding: 5px 12px;
+    }
+  }
+  .sg-consent-text-wrap {
+    .sg-consent-text{
+      input[type=checkbox] {
+        margin-top: 2px;
+      }
     }
   }
 }
