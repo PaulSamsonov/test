@@ -109,9 +109,12 @@ jQuery(document).ready(function ($) {
     switchInvestorType(this, landBlock);
   });
 
-  $('#nationality').select2({
+  $('#nationality_select').select2({
     minimumResultsForSearch: -1,
     width: '100%'
+  }).on('select2:select', function (e) {
+    var data = e.params.data;
+    $('#sg_custom_1').val(data.text);
   });
 
   grecaptcha.ready(function () {
@@ -350,6 +353,8 @@ jQuery(document).ready(function ($) {
       } else {
         landBlock.find('.less').addClass('active');
       }
+
+      $('#sg_custom_0').val($('#tokenButtons .active').data('investor-type'));
     }
   }
 

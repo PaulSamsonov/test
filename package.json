@@ -2,6 +2,10 @@
   "name": "bitwala",
   "private": true,
   "version": "1.0.0",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
   "dependencies": {
     "aos": "^2.3.4",
     "body-parser": "^1.18.3",
@@ -12,6 +16,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "lottie-web": "^5.4.2",
+    "select2": "^4.0.6-rc.1",
     "swiper": "^4.4.6"
   },
   "devDependencies": {

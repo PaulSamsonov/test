@@ -1256,7 +1256,7 @@
 	</div>
 </footer>
 <div class="modal fade whitelist-modal" id="whitelistModal" tabindex="-1" role="dialog"
-		 aria-labelledby="whitelistModal" aria-hidden="true">
+	 aria-labelledby="whitelistModal" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -1270,28 +1270,93 @@
 				<h4 id="modal-sub-title" class="modal-sub-title">The reservation is non-binding, we will
 					contact you with further information, including the link to the identification process, as
 					soon as available.</h4>
-				<form class="whitelist-form">
-					<div class="token-block">
-						<p class="sub-block-text">I want to reserve</p>
-						<div class="token-buttons" id="tokenButtons">
-							<div class="token-button active less" data-investor-type="public">&lt;€100k</div>
-							<div class="token-button more" data-investor-type="private">≥€100k</div>
-						</div>
-						<div class="sub-block-text text-right">worth of tokens</div>
-						<h4 class="modal-sub-title">The private sale is reserved for minimum investments of
-							€100k.</h4>
+				<div class="token-block">
+					<p class="sub-block-text">I want to reserve</p>
+					<div class="token-buttons" id="tokenButtons">
+						<div class="token-button active less" data-investor-type="public">&lt;€100k</div>
+						<div class="token-button more" data-investor-type="private">≥€100k</div>
 					</div>
-					<div class="form-group">
-						<div class="row">
-							<div class="col">
-								<input id="firstName" type="text" placeholder="First Name" class="inp">
-							</div>
-							<div class="col">
-								<input id="lastName" type="text" placeholder="Last Name" class="inp">
-							</div>
-						</div>
-						<input id="email" type="email" placeholder="Email" class="inp">
-						<select name="nationality" id="nationality">
+					<div class="sub-block-text text-right">worth of tokens</div>
+					<h4 class="modal-sub-title">The private sale is reserved for minimum investments of
+						€100k.</h4>
+				</div>
+				<script type="text/javascript" src="//sgwidget.leaderapps.co/js/sg-widget.js"></script>
+				<style>.sendgrid-subscription-widget input {
+					padding: .5em .5em .55em;
+					font-size: .8em;
+					font-family: sans-serif
+				}
+
+				.sendgrid-subscription-widget #sg_signup_first_name, .sendgrid-subscription-widget #sg_signup_last_name {
+					margin-right: .5em
+				}
+
+				.sendgrid-subscription-widget #sg-submit-btn {
+					display: inline-block;
+					color: #444;
+					border: 1px solid #ccc;
+					background: #ddd;
+					box-shadow: 0 0 5px -1px rgba(0, 0, 0, .2);
+					cursor: pointer;
+					vertical-align: middle;
+					max-width: 100px;
+					padding: .5em;
+					margin: 0 .4em;
+					text-align: center;
+					font-size: .9em;
+					font-family: sans-serif
+				}
+
+				.sendgrid-subscription-widget #sg-submit-btn:active {
+					color: #8e8b8b;
+					box-shadow: 0 0 5px -1px rgba(0, 0, 0, .6)
+				}
+
+				.sendgrid-subscription-widget .response {
+					display: none;
+					font-family: sans-serif;
+					font-size: .8em
+				}
+
+				.sendgrid-subscription-widget .success {
+					color: green
+				}
+
+				.sendgrid-subscription-widget .error, .sendgrid-subscription-widget .sg-consent-text a {
+					color: #3097d1
+				}
+
+				.sendgrid-subscription-widget .sg-consent-text {
+					font-size: .9em
+				}
+
+				.sendgrid-subscription-widget .sg-consent-text label {
+					font-weight: 400
+				}
+
+				.sendgrid-subscription-widget .required {
+					outline: 1px solid #f00;
+				}
+
+				.sendgrid-subscription-widget .sg_custom {
+					margin-left: 5px;
+				}
+
+				.sendgrid-subscription-widget .checkbox_label {
+					padding-left: 3px;
+				} </style>
+				<div id="sendgrid-subscription-widget" class="sendgrid-subscription-widget"
+					 data-emailerror="Please enter a valid email address"
+					 data-checkboxerror="Please tick the box to accept our conditions"
+					 data-customfieldserror="This field is required">
+					<form id="sg-widget" data-token="280834e6391e7e046ea70e6935db4ee8" onsubmit="return false;">
+						<div class="sg-response" id="sg-response"></div>
+						<input id="sg_signup_first_name" type="text" name="sg_signup_first_name"
+							   placeholder="First Name" required><input id="sg_signup_last_name" type="text"
+																		name="sg_signup_last_name"
+																		placeholder="Last Name" required>
+						<input	id="sg_email" type="email" name="sg_email" placeholder="you@example.com" required>
+						<select id="nationality_select">
 							<option value="">Nationality</option>
 							<option value="afghan">Afghan</option>
 							<option value="albanian">Albanian</option>
@@ -1488,27 +1553,18 @@
 							<option value="zambian">Zambian</option>
 							<option value="zimbabwean">Zimbabwean</option>
 						</select>
-					</div>
-					<div class="form-inner-wrap">
-						<a href="#" id="getWhitelisted" class="btn primary-theme-btn">Get whitelisted</a>
-						<div class="form-group form-check">
-							<div class="check-wrap">
-								<input type="checkbox" id="termsAndCond">
-								<label class="form-check-label" for="termsAndCond">I have read and accepted the
-									<a href="terms-and-conditions.html">Terms &amp; Conditions</a></label>
-							</div>
-							<div class="check-wrap">
-								<input type="checkbox" id="addToNews">
-								<label class="form-check-label" for="addToNews">
-									I would like to receive important STO updates.<br>
-									We will never spam you and you can unsubscribe any time.
-								</label>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
+						<input type="hidden" name="investor_type" id="sg_custom_0" class="sg_custom">
+						<input type="hidden" name="nationality"  id="sg_custom_1" class="sg_custom">
+						<input type="submit" id="sg-submit-btn" value="Subscribe">
+						<div class="sg-consent-text"><label><input type="checkbox" id="sg_consent_checkbox"
+																   name="sg_consent_checkbox"> I have read and accepted
+							the </label> <a target="_blank"
+											href="https://www.bitwalatoken.com/terms-and-conditions.html">Terms &
+							Conditions</a></div>
+					</form>
+				</div>
 
+			</div>
 		</div>
 	</div>
 </div>
