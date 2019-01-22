@@ -17,6 +17,7 @@ var path = {
   build: {
     html: "public/",
     js: "public/js/",
+    anim: "public/js/animation/",
     css: "public/css/",
     img: "public/images/",
     fonts: "public/fonts/",
@@ -25,6 +26,7 @@ var path = {
   src: {
     html: ["src/*.html", "src/favicon.*"],
     js: "src/js/*.*",
+    anim: "src/js/animation/**/*.*",
     style: "src/style/main.scss",
     img: "src/img/**/*.*",
     fonts: "src/fonts/**/*.*",
@@ -51,6 +53,7 @@ var path = {
   watch: {
     html: "src/**/*.html",
     js: "src/js/**/*.js",
+    anim: "src/js/animation/**/*.*",
     style: "src/style/**/*.scss",
     img: "./src/img/**/*.*",
     fonts: "src/font/**/*.*",
@@ -90,6 +93,10 @@ gulp.task("js", function() {
     .pipe(sourcemaps.write(".").on("error", errorAlert))
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({ stream: true }));
+});
+
+gulp.task("anim", function() {
+  gulp.src(path.src.anim).pipe(gulp.dest(path.build.anim));
 });
 
 gulp.task("style", function() {
@@ -153,7 +160,7 @@ gulp.task("fonts:lib", function() {
 
 gulp.task("lib", ["css:lib", "js:lib", "fonts:lib"]);
 
-gulp.task("build", ["html", "js", "style", "fonts", "data", "lib", "image"]);
+gulp.task("build", ["html", "js", "anim", "style", "fonts", "data", "lib", "image"]);
 
 gulp.task("watch", function() {
   watch([path.watch.html], function() {
@@ -164,6 +171,9 @@ gulp.task("watch", function() {
   });
   watch([path.watch.js], function() {
     gulp.start("js");
+  });
+  watch([path.watch.anim], function() {
+    gulp.start("anim");
   });
   watch([path.watch.img], function() {
     gulp.start("images");

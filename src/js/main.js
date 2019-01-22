@@ -362,4 +362,20 @@ jQuery(document).ready(function ($) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  // Animation
+  var anim;
+  var elem = document.getElementById('homeAnimation');
+  var animData = {
+    container: elem,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    rendererSettings: {
+      progressiveLoad:true,
+      preserveAspectRatio:'xMidYMid meet'
+    },
+    path: '/js/animation/bitwala_v3_start.json'
+  };
+  anim = lottie.loadAnimation(animData);
+  anim.setSubframe(false);
 });
