@@ -156,7 +156,10 @@
 </header>
 <div class="main-content">
 	<section class="section section-home">
-		<div class="animation-box" id="homeAnimation"></div>
+		<div class="main-anim-box">
+			<div class="animation-box" id="homeAnimation"></div>
+			<div class="animation-box" id="homeAnimation2"></div>
+		</div>
 		<div class="container">
 			<h1 class="main-title">The only bank</h1>
 			<h2 class="main-sub-title">Merging banking, crypto & tokenised assets</h2>
@@ -642,24 +645,24 @@
 							<img class="default-img" src="/images/logo-brickblock-grey.png" alt="brickblock"
 							>
 						</li>
-<!--						<li data-target="#carouselExampleIndicators" data-slide-to="2">
-							<img class="active-img" src="/images/logo-coparion-blue.png"
-									 alt="bitcoin-foundation" width="170">
-							<img class="default-img" src="/images/logo-coparion-grey.png"
-									 alt="bitcoin-foundation" width="170">
-						</li>
-						<li data-target="#carouselExampleIndicators" data-slide-to="3">
-							<img class="active-img" src="/images/logo-htgf-hover.png"
-									 alt="htgf" width="130">
-							<img class="default-img" src="/images/logo-htgf-grey.png"
-									 alt="htgf" width="130">
-						</li>
-						<li data-target="#carouselExampleIndicators" data-slide-to="4">
-							<img class="active-img" src="/images/logo-earlybird-hover.png" alt="earlybird"
-									 width="130">
-							<img class="default-img" src="/images/logo-earlybird-grey.png" alt="earlybird"
-									 width="130">
-						</li>-->
+						<!--						<li data-target="#carouselExampleIndicators" data-slide-to="2">
+													<img class="active-img" src="/images/logo-coparion-blue.png"
+															 alt="bitcoin-foundation" width="170">
+													<img class="default-img" src="/images/logo-coparion-grey.png"
+															 alt="bitcoin-foundation" width="170">
+												</li>
+												<li data-target="#carouselExampleIndicators" data-slide-to="3">
+													<img class="active-img" src="/images/logo-htgf-hover.png"
+															 alt="htgf" width="130">
+													<img class="default-img" src="/images/logo-htgf-grey.png"
+															 alt="htgf" width="130">
+												</li>
+												<li data-target="#carouselExampleIndicators" data-slide-to="4">
+													<img class="active-img" src="/images/logo-earlybird-hover.png" alt="earlybird"
+															 width="130">
+													<img class="default-img" src="/images/logo-earlybird-grey.png" alt="earlybird"
+															 width="130">
+												</li>-->
 					</ol>
 				</div>
 			</div>
@@ -1257,7 +1260,7 @@
 	</div>
 </footer>
 <div class="modal fade whitelist-modal" id="whitelistModal" tabindex="-1" role="dialog"
-	 aria-labelledby="whitelistModal" aria-hidden="true">
+		 aria-labelledby="whitelistModal" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -1347,16 +1350,18 @@
 					padding-left: 3px;
 				} </style>
 				<div id="sendgrid-subscription-widget" class="sendgrid-subscription-widget"
-					 data-emailerror="Please enter a valid email address"
-					 data-checkboxerror="Please tick the box to accept our conditions"
-					 data-customfieldserror="This field is required">
-					<form id="sg-widget" data-token="280834e6391e7e046ea70e6935db4ee8" onsubmit="return false;">
+						 data-emailerror="Please enter a valid email address"
+						 data-checkboxerror="Please tick the box to accept our conditions"
+						 data-customfieldserror="This field is required">
+					<form id="sg-widget" data-token="280834e6391e7e046ea70e6935db4ee8"
+								onsubmit="return false;">
 						<div class="sg-response" id="sg-response"></div>
 						<input id="sg_signup_first_name" type="text" name="sg_signup_first_name"
-							   placeholder="First Name" required><input id="sg_signup_last_name" type="text"
-																		name="sg_signup_last_name"
-																		placeholder="Last Name" required>
-						<input	id="sg_email" type="email" name="sg_email" placeholder="you@example.com" required>
+									 placeholder="First Name" required><input id="sg_signup_last_name" type="text"
+																														name="sg_signup_last_name"
+																														placeholder="Last Name" required>
+						<input id="sg_email" type="email" name="sg_email" placeholder="you@example.com"
+									 required>
 						<select id="nationality_select">
 							<option value="">Nationality</option>
 							<option value="afghan">Afghan</option>
@@ -1554,16 +1559,19 @@
 							<option value="zambian">Zambian</option>
 							<option value="zimbabwean">Zimbabwean</option>
 						</select>
-						<input type="hidden" name="investor_type" id="sg_custom_0" class="sg_custom" value="public">
-						<input type="hidden" name="nationality"  id="sg_custom_1" class="sg_custom">
-						<input type="hidden" name="newsletter" id="sg_custom_2" class="sg_custom" >
+						<input type="hidden" name="investor_type" id="sg_custom_0" class="sg_custom"
+									 value="public">
+						<input type="hidden" name="nationality" id="sg_custom_1" class="sg_custom">
+						<input type="hidden" name="newsletter" id="sg_custom_2" class="sg_custom">
 						<input type="submit" id="sg-submit-btn" value="Subscribe">
 						<div class="sg-consent-text-wrap">
 							<div class="sg-consent-text">
 								<label>
-									<input type="checkbox" id="sg_consent_checkbox" name="sg_consent_checkbox"> I have read and accepted the
+									<input type="checkbox" id="sg_consent_checkbox" name="sg_consent_checkbox"> I have
+									read and accepted the
 								</label>
-								<a target="_blank" href="https://www.bitwalatoken.com/terms-and-conditions.html">Terms & Conditions</a>
+								<a target="_blank" href="https://www.bitwalatoken.com/terms-and-conditions.html">Terms
+									& Conditions</a>
 							</div>
 							<div class="sg-consent-text">
 								<label for="addToNews">

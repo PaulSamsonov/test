@@ -324,19 +324,85 @@ jQuery(document).ready(function ($) {
   }
 
   // Animation
-  var anim;
+
+/*  var animations = ['start', 'loop'];
+  var params = [false, true];
+  var len = animations.length;
+  for (var i = 0; i<len; i++) {
+    var anim;
+    var elem = document.getElementById('homeAnimation');
+    var animData = {
+      container: elem,
+      renderer: 'svg',
+      loop: params[i],
+      autoplay: params[i],
+      renderSettings: {
+        progressiveLoad: true
+      },
+      path: '/js/animation/'+animations[i]+'.json'
+    };*/
+// };
+
+    // anim.goToAndPlay(1,true);
+    // anim.addEventListener('complete', function(){
+    //       anim.destroy();
+    //     });
+    // if (i = 0) {
+    //   anim.goToAndPlay(1,true);
+    //   anim.addEventListener('complete', function(){
+    //     anim.destroy();
+    //   });
+    // }
+
+
+  var anim1;
   var elem = document.getElementById('homeAnimation');
-  var animData = {
+  var anim1Data = {
     container: elem,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    rendererSettings: {
+      progressiveLoad:true
+    },
+    path: '/js/animation/start.json'
+  };
+
+  var anim2;
+  var elem2 = document.getElementById('homeAnimation2');
+  var anim2Data = {
+    container: elem2,
     renderer: 'svg',
     loop: true,
     autoplay: true,
     rendererSettings: {
-      progressiveLoad:true,
-      preserveAspectRatio:'xMidYMid meet'
+      progressiveLoad:true
     },
-    path: '/js/animation/bitwala_v3_start.json'
+    path: '/js/animation/loop.json'
   };
-  anim = lottie.loadAnimation(animData);
-  anim.setSubframe(false);
+
+
+  anim2 = lottie.loadAnimation(anim2Data);
+  anim2.addEventListener('DOMLoaded', function () {
+    anim2.addEventListener(2, repeat);
+    anim2.play();
+
+    function repeat() {
+      if (anim2.currentRawFrame > frameToStop) {
+        anim2.addEventListener(2, repeat);
+        anim2.goToAndPlay(0,true);
+      }
+    }
+  });
+  // anim2.setSubframe(false);
+  /*anim1 = lottie.loadAnimation(anim1Data);
+  anim1.goToAndPlay(1,true);
+*/
+  //
+  // anim2.setSubframe(false);
+  // anim1.addEventListener('complete', function(){
+  //   anim2 = lottie.loadAnimation(anim2Data);
+  // });
 });
+
+
