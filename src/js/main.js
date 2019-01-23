@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
 
   //----- Events
 
-  //anchor links
+  // Anchor links
   $('.main-nav a[href*="#"], .anchor').click(function (event) {
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top - 200
@@ -16,8 +16,7 @@ jQuery(document).ready(function ($) {
     event.preventDefault();
   });
 
-
-  //mobile navigation
+  // Mobile navigation
   $('.menu-toggle').on('click', function () {
     $(this).toggleClass('active');
     $('body').toggleClass('fixed');
@@ -32,7 +31,7 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  //aos init
+  // AOS init
   AOS.init();
 
   // Switch investor type on popup
@@ -61,18 +60,18 @@ jQuery(document).ready(function ($) {
     grecaptcha.execute('6LcO0ocUAAAAABj11_siC5P2rZSsxviho9yi0XMh', {action: 'homepage'}).then(function (token) {
 
       var form = new FormData();
-      form.append("secret", "6LcO0ocUAAAAAIjN4_imwakEeiP1XcTARILJmMmh");
-      form.append("response", token);
+      form.append('secret', '6LcO0ocUAAAAAIjN4_imwakEeiP1XcTARILJmMmh');
+      form.append('response', token);
 
       var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://www.google.com/recaptcha/api/siteverify",
-        "method": "POST",
-        "processData": false,
-        "contentType": false,
-        "mimeType": "multipart/form-data",
-        "data": form
+        'async': true,
+        'crossDomain': true,
+        'url': 'https://www.google.com/recaptcha/api/siteverify',
+        'method': 'POST',
+        'processData': false,
+        'contentType': false,
+        'mimeType': 'multipart/form-data',
+        'data': form
       };
 
       jQuery.ajax(settings).done(function (response) {
@@ -86,12 +85,12 @@ jQuery(document).ready(function ($) {
   // Sticky slider on scrolling
   window.onscroll = function () {
     var sticky = 20;
-    var header = $("#mainHeader");
+    var header = $('#mainHeader');
 
     if (window.pageYOffset > sticky) {
-      header.addClass("sticky-header");
+      header.addClass('sticky-header');
     } else {
-      header.removeClass("sticky-header");
+      header.removeClass('sticky-header');
     }
   };
 
@@ -101,8 +100,8 @@ jQuery(document).ready(function ($) {
 
     fileData = {
       name: $(this).data('doc-name').toLowerCase(),
-      link:  $(this).attr('href')
-  };
+      link: $(this).attr('href')
+    };
 
     $('#registerModal').modal('show');
 
@@ -130,7 +129,7 @@ jQuery(document).ready(function ($) {
     downloadModal.find('.btn').attr('href', fileData.link).text('Download ' + capitalizeFirstLetter(fileData.name));
     setTimeout(function () {
       downloadModal.modal('show');
-    }, 500)
+    }, 500);
   });
 
   // Show thank you modal after downloading
@@ -171,7 +170,7 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  //team member overlay
+  //Team member overlay
   if ($(window).width() <= 768) {
     $('.team-member').on('click', function () {
       $(this).find('.overlay').fadeToggle();
@@ -210,7 +209,7 @@ jQuery(document).ready(function ($) {
       success: function (res) {
         if (failList.indexOf(nationality) === -1) {
           addToList(res.persisted_recipients, 6488806);
-            sendEmail(email.val());
+          sendEmail(email.val());
         } else {
           addToList(res.persisted_recipients, 6498852);
           sendEmail(email.val());
@@ -224,7 +223,7 @@ jQuery(document).ready(function ($) {
         if (fileData) {
           setTimeout(function () {
             $('#checkModal').find('.btn').attr('href', fileData.link).text('Download ' + capitalizeFirstLetter(fileData.name)).end().modal('show');
-          }, 500)
+          }, 500);
 
         } else {
           $('#whitelistModalSend').find('.modal-title').html('Please check your email, we will contact you shortly with more information!').end().modal('show');
@@ -319,90 +318,25 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  function capitalizeFirstLetter(string) {
+  function capitalizeFirstLetter (string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
   // Animation
-
-/*  var animations = ['start', 'loop'];
-  var params = [false, true];
-  var len = animations.length;
-  for (var i = 0; i<len; i++) {
-    var anim;
-    var elem = document.getElementById('homeAnimation');
-    var animData = {
-      container: elem,
-      renderer: 'svg',
-      loop: params[i],
-      autoplay: params[i],
-      renderSettings: {
-        progressiveLoad: true
-      },
-      path: '/js/animation/'+animations[i]+'.json'
-    };*/
-// };
-
-    // anim.goToAndPlay(1,true);
-    // anim.addEventListener('complete', function(){
-    //       anim.destroy();
-    //     });
-    // if (i = 0) {
-    //   anim.goToAndPlay(1,true);
-    //   anim.addEventListener('complete', function(){
-    //     anim.destroy();
-    //   });
-    // }
-
-
-  var anim1;
+  var anim;
   var elem = document.getElementById('homeAnimation');
-  var anim1Data = {
+  var animData = {
     container: elem,
-    renderer: 'svg',
-    loop: false,
-    autoplay: false,
-    rendererSettings: {
-      progressiveLoad:true
-    },
-    path: '/js/animation/start.json'
-  };
-
-  var anim2;
-  var elem2 = document.getElementById('homeAnimation2');
-  var anim2Data = {
-    container: elem2,
     renderer: 'svg',
     loop: true,
     autoplay: true,
     rendererSettings: {
-      progressiveLoad:true
+      progressiveLoad: true
     },
-    path: '/js/animation/loop.json'
+    path: '/js/animation/full.json'
   };
-
-
-  anim2 = lottie.loadAnimation(anim2Data);
-  anim2.addEventListener('DOMLoaded', function () {
-    anim2.addEventListener(2, repeat);
-    anim2.play();
-
-    function repeat() {
-      if (anim2.currentRawFrame > frameToStop) {
-        anim2.addEventListener(2, repeat);
-        anim2.goToAndPlay(0,true);
-      }
-    }
-  });
-  // anim2.setSubframe(false);
-  /*anim1 = lottie.loadAnimation(anim1Data);
-  anim1.goToAndPlay(1,true);
-*/
-  //
-  // anim2.setSubframe(false);
-  // anim1.addEventListener('complete', function(){
-  //   anim2 = lottie.loadAnimation(anim2Data);
-  // });
+  anim = lottie.loadAnimation(animData);
+  anim.playSegments([[0, 480], [480, 719]], true);
 });
 
 
